@@ -2862,6 +2862,147 @@ height:160px;
 
 
 }
+
+/* =====================================
+   TARJETAS FLOTANTES ORGANIZADORES
+===================================== */
+
+
+.logos-organizadores {
+
+
+display:grid !important;
+
+
+grid-template-columns:
+
+repeat(3, 1fr);
+
+
+gap:35px;
+
+
+margin-top:40px;
+
+
+}
+
+
+
+
+.logo-organizador {
+
+
+background:white;
+
+
+height:220px;
+
+
+border-radius:25px;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+padding:30px;
+
+
+box-shadow:
+
+0 12px 35px rgba(13,105,146,.18);
+
+
+border:
+
+1px solid #d7e6ec;
+
+
+transition:.35s;
+
+
+}
+
+
+
+
+.logo-organizador:hover {
+
+
+transform:translateY(-10px);
+
+
+box-shadow:
+
+0 20px 45px rgba(13,105,146,.30);
+
+
+border-color:#0d6992;
+
+
+}
+
+
+
+
+.logo-organizador img {
+
+
+max-width:100%;
+
+
+max-height:150px;
+
+
+object-fit:contain;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.logos-organizadores {
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.logos-organizadores {
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+}
    
 </style>
 
@@ -3082,32 +3223,75 @@ investigación y divulgación científica.
 <div class="logos-organizadores">
 
 
+<div class="logo-organizador">
 
 <img src="organizador1.png" alt="Organizador 1">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador2.png" alt="Organizador 2">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador3.png" alt="Organizador 3">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador4.png" alt="Organizador 4">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador5.png" alt="Organizador 5">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador6.png" alt="Organizador 6">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador7.png" alt="Organizador 7">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador8.png" alt="Organizador 8">
 
+</div>
+
+
+
+<div class="logo-organizador">
 
 <img src="organizador9.png" alt="Organizador 9">
+
+</div>
 
 
 </div>
