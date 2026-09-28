@@ -17,20 +17,34 @@ III Simposio de Interacciones Biológicas y Diversidad
 <style>
 
 
+/* COLORES BASADOS EN EL LOGO */
+
 :root{
 
---verde:#1f6b55;
+--verde:#1d6b55;
 --azul:#17647a;
---claro:#f5f8f7;
---gris:#555;
+--verde-claro:#e7f2ed;
+--gris:#444;
+--fondo:#ffffff;
 
 }
 
 
 
+/* CONFIGURACIÓN GENERAL */
+
+
 *{
 
 box-sizing:border-box;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
 
 }
 
@@ -45,15 +59,16 @@ font-family:
 Arial,
 sans-serif;
 
-background:white;
+background:var(--fondo);
 
-color:#333;
+color:var(--gris);
 
 }
 
 
 
-/* NAV */
+
+/* BARRA DE NAVEGACIÓN */
 
 
 nav{
@@ -62,20 +77,21 @@ position:sticky;
 
 top:0;
 
+z-index:100;
+
 background:white;
 
 display:flex;
 
 justify-content:center;
 
-gap:25px;
+gap:30px;
 
 padding:15px;
 
 box-shadow:
-0 2px 10px rgba(0,0,0,.1);
 
-z-index:10;
+0 2px 10px rgba(0,0,0,.12);
 
 }
 
@@ -85,9 +101,9 @@ nav a{
 
 text-decoration:none;
 
-color:var(--verde);
-
 font-weight:bold;
+
+color:var(--verde);
 
 }
 
@@ -102,14 +118,17 @@ color:var(--azul);
 
 
 
-/* HEADER */
+
+/* ENCABEZADO */
 
 
 header{
 
 text-align:center;
 
-padding:40px 20px;
+padding:50px 20px;
+
+background:white;
 
 border-bottom:
 
@@ -121,9 +140,25 @@ border-bottom:
 
 .logo{
 
-width:300px;
+width:350px;
 
-max-width:80%;
+max-width:90%;
+
+}
+
+
+
+
+/* CONTENEDOR */
+
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
 
 }
 
@@ -135,148 +170,46 @@ max-width:80%;
 
 section{
 
-width:90%;
-
-max-width:1200px;
-
-margin:auto;
-
-padding:40px 0;
+padding:50px 0;
 
 }
 
 
 
-h2{
+.titulo{
 
 color:var(--verde);
 
-font-size:30px;
+font-size:32px;
+
+text-align:center;
+
+margin-bottom:30px;
 
 }
 
 
+
+
+/* TARJETAS */
 
 
 .card{
 
 background:white;
 
-padding:25px;
+border-radius:18px;
 
-border-radius:15px;
-
-box-shadow:
-
-0 5px 15px rgba(0,0,0,.12);
-
-margin-bottom:20px;
-
-}
-
-
-
-/* FILTROS */
-
-
-.filtros{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:15px;
-
-}
-
-
-
-select,input{
-
-padding:12px;
-
-border-radius:10px;
-
-border:1px solid #ccc;
-
-font-size:16px;
-
-}
-
-
-
-/* EVENTOS */
-
-
-.evento{
-
-background:#fff;
-
-border-left:
-
-7px solid var(--azul);
-
-border-radius:15px;
-
-padding:20px;
-
-margin:20px 0;
-
-cursor:pointer;
+padding:30px;
 
 box-shadow:
 
-0 4px 12px rgba(0,0,0,.1);
+0 5px 18px rgba(0,0,0,.12);
+
+margin-bottom:25px;
 
 }
 
-
-
-.evento:hover{
-
-transform:translateY(-3px);
-
-}
-
-
-
-.detalle{
-
-display:none;
-
-margin-top:20px;
-
-background:#f3f7f6;
-
-padding:20px;
-
-border-radius:10px;
-
-}
-
-
-
-.evento.activo .detalle{
-
-display:block;
-
-}
-
-
-
-.etiqueta{
-
-background:#dcefe8;
-
-padding:5px 12px;
-
-border-radius:20px;
-
-color:var(--verde);
-
-display:inline-block;
-
-}
 
 
 
@@ -287,17 +220,17 @@ display:inline-block;
 
 display:inline-block;
 
+padding:14px 25px;
+
 background:var(--verde);
 
 color:white;
 
-padding:12px 20px;
-
-border-radius:10px;
+border-radius:12px;
 
 text-decoration:none;
 
-margin:10px;
+font-weight:bold;
 
 }
 
@@ -309,18 +242,6 @@ background:var(--azul);
 
 }
 
-
-
-/* QR */
-
-
-.qr{
-
-width:250px;
-
-max-width:90%;
-
-}
 
 
 
@@ -337,14 +258,35 @@ text-align:center;
 
 padding:25px;
 
+margin-top:30px;
+
 }
 
 
 
 
-.oculto{
+/* RESPONSIVE */
 
-display:none;
+
+@media(max-width:700px){
+
+
+nav{
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+
+.logo{
+
+width:250px;
+
+}
+
+
 
 }
 
@@ -361,7 +303,11 @@ display:none;
 
 
 
+<!-- BARRA DE NAVEGACIÓN -->
+
+
 <nav>
+
 
 <a href="#inicio">
 Inicio
@@ -393,6 +339,10 @@ Contacto
 
 
 
+
+<!-- LOGO -->
+
+
 <header>
 
 
@@ -401,24 +351,41 @@ Contacto
 
 </header>
 
+<!-- CONTENIDO PRINCIPAL -->
+
+<div class="container">
 
 
 
+<!-- INICIO -->
 
 <section id="inicio">
+
+
+<h2 class="titulo">
+Bienvenidos
+</h2>
+
 
 
 <div class="card">
 
 
-<h2>
-Bienvenidos
-</h2>
+<p>
+
+El <strong>III Simposio de Interacciones Biológicas y Diversidad</strong>
+es un espacio académico orientado al intercambio de conocimientos,
+divulgación científica y discusión alrededor de la biodiversidad,
+las interacciones biológicas y los avances de investigación.
+
+</p>
 
 
 <p>
 
-El III Simposio de Interacciones Biológicas y Diversidad es un espacio académico para la divulgación científica, intercambio de conocimientos y discusión sobre biodiversidad e interacciones biológicas.
+En este encuentro participan estudiantes, investigadores y profesionales
+con el objetivo de fortalecer la comunicación científica y promover
+la integración entre diferentes áreas de la biología.
 
 </p>
 
@@ -433,10 +400,13 @@ El III Simposio de Interacciones Biológicas y Diversidad es un espacio académi
 
 
 
+<!-- CRONOGRAMA -->
+
+
 <section id="cronograma">
 
 
-<h2>
+<h2 class="titulo">
 Cronograma del evento
 </h2>
 
@@ -445,22 +415,31 @@ Cronograma del evento
 <div class="card">
 
 
+<p>
+Utiliza los filtros para encontrar actividades por día,
+tipo de evento o palabras clave.
+</p>
+
+
+
 <div class="filtros">
 
 
-<select id="dia">
+<select id="filtroDia">
+
 
 <option value="todos">
 Todos los días
 </option>
 
-<option value="1">
-Día 1
+
+<option value="5">
+5 de octubre
 </option>
 
 
-<option value="2">
-Día 2
+<option value="6">
+6 de octubre
 </option>
 
 
@@ -468,7 +447,9 @@ Día 2
 
 
 
-<select id="tipo">
+
+
+<select id="filtroTipo">
 
 
 <option value="todos">
@@ -487,7 +468,12 @@ Taller
 
 
 <option value="Charla">
-Charla
+Charla estudiantil
+</option>
+
+
+<option value="Poster">
+Poster
 </option>
 
 
@@ -495,9 +481,12 @@ Charla
 
 
 
+
+
 <input 
-id="buscar"
-placeholder="Buscar actividad..."
+type="text"
+id="buscador"
+placeholder="Buscar actividad o conferencista..."
 >
 
 
@@ -510,15 +499,27 @@ placeholder="Buscar actividad..."
 
 
 
-<div id="lista">
+
+
+<div id="cronogramaLista">
+
+
+
+
+
+<!-- ACTIVIDAD DE EJEMPLO -->
 
 
 
 <div class="evento"
 
-data-dia="1"
+data-dia="5"
 
 data-tipo="Conferencia">
+
+
+
+<div class="card">
 
 
 <h3>
@@ -526,8 +527,21 @@ Título de la actividad
 </h3>
 
 
+
+<p>
+📅 5 de octubre
+</p>
+
+
+<p>
+🕘 Hora de inicio - Hora final
+</p>
+
+
 <span class="etiqueta">
+
 Conferencia
+
 </span>
 
 
@@ -535,44 +549,64 @@ Conferencia
 <div class="detalle">
 
 
+<hr>
+
+
 <p>
 <strong>Día:</strong>
-Agregar
+5 de octubre
 </p>
+
 
 
 <p>
 <strong>Hora:</strong>
-Agregar
+Agregar horario
 </p>
+
 
 
 <p>
 <strong>Actividad:</strong>
-Agregar
+Nombre de la actividad
 </p>
+
+
+
+<p>
+<strong>Tipo:</strong>
+Conferencia
+</p>
+
 
 
 <p>
 <strong>Conferencista:</strong>
-Agregar
+Nombre del conferencista
 </p>
+
 
 
 <p>
 <strong>Modalidad:</strong>
-Agregar
+Presencial / Virtual
 </p>
+
+
+
+<p>
+<strong>Lugar:</strong>
+Agregar lugar
+</p>
+
 
 
 <p>
 <strong>Descripción:</strong>
-Agregar descripción completa de la conferencia o actividad.
+Descripción completa de la conferencia o actividad.
 </p>
 
 
-</div>
-
 
 </div>
 
@@ -580,20 +614,27 @@ Agregar descripción completa de la conferencia o actividad.
 
 </div>
 
+
+
+</div>
+
+
+
+
+
+</div>
 
 
 </section>
 
-
-
-
+<!-- POSTERS -->
 
 
 <section id="posters">
 
 
-<h2>
-Plantillas de póster
+<h2 class="titulo">
+Plantilla de póster
 </h2>
 
 
@@ -602,21 +643,31 @@ Plantillas de póster
 
 
 <p>
-Aquí estarán disponibles las plantillas oficiales para presentación de trabajos.
+
+Aquí encontrarás la plantilla oficial para la elaboración
+de los pósteres científicos del III Simposio de Interacciones
+Biológicas y Diversidad.
+
 </p>
 
 
-<a class="boton" href="plantilla_vertical.pdf">
-Póster vertical
+
+<a 
+
+class="boton"
+
+href="https://canva.link/u1kqdcl0ja9gwek"
+
+target="_blank">
+
+Abrir plantilla en Canva
+
 </a>
 
-
-<a class="boton" href="plantilla_horizontal.pdf">
-Póster horizontal
-</a>
 
 
 </div>
+
 
 
 </section>
@@ -626,10 +677,15 @@ Póster horizontal
 
 
 
+
+
+<!-- ASISTENCIA -->
+
+
 <section id="asistencia">
 
 
-<h2>
+<h2 class="titulo">
 Registro de asistencia
 </h2>
 
@@ -639,14 +695,28 @@ Registro de asistencia
 
 
 <p>
-Durante el evento estará disponible el código QR para registrar asistencia.
+
+Durante el desarrollo del evento estará disponible
+el código QR para registrar la asistencia de los participantes.
+
 </p>
 
 
-<img src="qr.png" class="qr">
+
+<img 
+
+src="qr.png"
+
+alt="Código QR de asistencia"
+
+style="width:250px; max-width:90%;"
+
+>
+
 
 
 </div>
+
 
 
 </section>
@@ -656,27 +726,50 @@ Durante el evento estará disponible el código QR para registrar asistencia.
 
 
 
+
+
+<!-- CONTACTO -->
+
+
 <section id="contacto">
 
 
-<h2>
+<h2 class="titulo">
 Contacto
 </h2>
+
 
 
 <div class="card">
 
 
 <p>
-Agregar correo, redes sociales y enlaces del evento.
+Correo:
+<br>
+Agregar correo oficial del evento
 </p>
+
+
+
+<p>
+Redes sociales:
+<br>
+Agregar enlaces oficiales
+</p>
+
 
 
 </div>
 
 
+
 </section>
 
+
+
+
+
+</div>
 
 
 
@@ -685,9 +778,116 @@ Agregar correo, redes sociales y enlaces del evento.
 
 <footer>
 
+
 III Simposio de Interacciones Biológicas y Diversidad
 
+<br>
+
+Universidad Distrital Francisco José de Caldas
+
+
 </footer>
+
+<style>
+
+
+.filtros{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+
+
+.filtros select,
+.filtros input{
+
+padding:12px;
+
+border-radius:10px;
+
+border:1px solid #ccc;
+
+font-size:15px;
+
+}
+
+
+
+
+.evento{
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.evento:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+
+.detalle{
+
+display:none;
+
+margin-top:20px;
+
+padding-top:15px;
+
+}
+
+
+
+.evento.activo .detalle{
+
+display:block;
+
+}
+
+
+
+.etiqueta{
+
+display:inline-block;
+
+background:#e4f2ec;
+
+color:#1d6b55;
+
+padding:6px 14px;
+
+border-radius:20px;
+
+font-size:14px;
+
+font-weight:bold;
+
+}
+
+
+
+.oculto{
+
+display:none;
+
+}
+
+
+</style>
+
 
 
 
@@ -695,22 +895,25 @@ III Simposio de Interacciones Biológicas y Diversidad
 <script>
 
 
-// desplegar eventos
+
+
+// ===============================
+// DESPLEGAR INFORMACIÓN DEL EVENTO
+// ===============================
+
 
 
 document.querySelectorAll(".evento")
-.forEach(e=>{
+.forEach(function(evento){
 
 
-e.addEventListener(
-"click",
-()=>{
+evento.addEventListener("click",function(){
 
-e.classList.toggle("activo");
 
-}
+evento.classList.toggle("activo");
 
-);
+
+});
 
 
 });
@@ -718,76 +921,178 @@ e.classList.toggle("activo");
 
 
 
-// filtros
 
 
-let dia=document.getElementById("dia");
-
-let tipo=document.getElementById("tipo");
-
-let buscar=document.getElementById("buscar");
+// ===============================
+// FILTROS
+// ===============================
 
 
 
-function filtrar(){
+let filtroDia =
+document.getElementById("filtroDia");
+
+
+let filtroTipo =
+document.getElementById("filtroTipo");
+
+
+let buscador =
+document.getElementById("buscador");
+
+
+
+function filtrarEventos(){
+
+
+
+let diaSeleccionado =
+filtroDia.value;
+
+
+
+let tipoSeleccionado =
+filtroTipo.value;
+
+
+
+let texto =
+buscador.value.toLowerCase();
+
+
 
 
 document.querySelectorAll(".evento")
-.forEach(e=>{
-
-
-let cumpleDia=
-dia.value=="todos" ||
-e.dataset.dia==dia.value;
+.forEach(function(evento){
 
 
 
-let cumpleTipo=
-tipo.value=="todos" ||
-e.dataset.tipo==tipo.value;
+let dia =
+evento.dataset.dia;
 
 
 
-let cumpleTexto=
-e.innerText
-.toLowerCase()
-.includes(
-buscar.value.toLowerCase()
-);
+let tipo =
+evento.dataset.tipo;
+
+
+
+let contenido =
+evento.innerText.toLowerCase();
+
+
+
+
+
+let cumpleDia =
+
+diaSeleccionado === "todos"
+
+||
+
+dia === diaSeleccionado;
+
+
+
+
+
+let cumpleTipo =
+
+tipoSeleccionado === "todos"
+
+||
+
+tipo === tipoSeleccionado;
+
+
+
+
+
+let cumpleTexto =
+
+contenido.includes(texto);
+
+
+
+
 
 
 
 if(
-cumpleDia &&
-cumpleTipo &&
+
+cumpleDia
+
+&&
+
+cumpleTipo
+
+&&
+
 cumpleTexto
-)
 
-e.classList.remove("oculto");
-
-
-else
-
-e.classList.add("oculto");
+){
 
 
+evento.classList.remove("oculto");
 
-});
+
+}
+
+else{
+
+
+evento.classList.add("oculto");
 
 
 }
 
 
 
-dia.onchange=filtrar;
+});
 
-tipo.onchange=filtrar;
 
-buscar.onkeyup=filtrar;
+
+}
+
+
+
+
+
+
+
+filtroDia.addEventListener(
+
+"change",
+
+filtrarEventos
+
+);
+
+
+
+filtroTipo.addEventListener(
+
+"change",
+
+filtrarEventos
+
+);
+
+
+
+buscador.addEventListener(
+
+"keyup",
+
+filtrarEventos
+
+);
+
 
 
 
 </script>
+
 
 
 
