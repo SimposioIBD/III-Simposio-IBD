@@ -1,1 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>III Simposio de Interacciones Biológicas y Diversidad</title>
+
+
+<style>
+
+/* ============================
+   PALETA PRINCIPAL
+============================ */
+
+:root {
+
+    --azul: #0d6992;
+    --azul-oscuro: #084b69;
+    --azul-claro: #e8f4f8;
+
+    --verde-complemento: #4f8a70;
+
+    --blanco: #ffffff;
+
+    --gris-texto: #34495e;
+
+    --borde: #d5e7ee;
+
+}
+
+
+/* ============================
+   CONFIGURACIÓN GENERAL
+============================ */
+
+* {
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+body {
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:white;
+
+    color:var(--gris-texto);
+
+}
+
+
+/* ============================
+   NAVEGACIÓN
+============================ */
+
+nav {
+
+    width:100%;
+
+    background:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    border-bottom:
+    1px solid var(--borde);
+
+}
+
+
+.nav-container {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:15px 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+nav ul {
+
+    list-style:none;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+
+nav a {
+
+    text-decoration:none;
+
+    color:var(--azul-oscuro);
+
+    font-weight:600;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover {
+
+    background:var(--azul-claro);
+
+    color:var(--azul);
+
+}
+
+
+
+/* ============================
+   BANNER PRINCIPAL
+============================ */
+
+
+.banner {
+
+    width:100%;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #e8f4f8
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:25px 0;
+
+}
+
+
+
+.banner img {
+
+    width:100%;
+
+    max-width:1200px;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+
+
+/* ============================
+   CONTENIDO
+============================ */
+
+
+.contenedor {
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+
+section {
+
+    padding:70px 0;
+
+}
+
+
+
+.titulo-seccion {
+
+    text-align:center;
+
+    color:var(--azul);
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.linea {
+
+    width:70px;
+
+    height:4px;
+
+    background:var(--azul);
+
+    margin:0 auto 35px;
+
+    border-radius:10px;
+
+}
+
+
+
+.texto-centro {
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:18px;
+
+}
+
+
+
+/* ============================
+   TARJETAS
+============================ */
+
+
+.tarjeta {
+
+    background:white;
+
+    border:
+
+    1px solid var(--borde);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 10px 30px rgba(13,105,146,.10);
+
+}
+
+
+
+/* ============================
+   PIE DE PAGINA
+============================ */
+
+
+footer {
+
+    background:var(--azul-oscuro);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+
+
+/* ============================
+   CELULAR
+============================ */
+
+
+@media(max-width:700px){
+
+
+.banner img {
+
+    width:100%;
+
+}
+
+
+.titulo-seccion {
+
+    font-size:28px;
+
+}
+
+
+nav a {
+
+    font-size:13px;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<!-- ============================
+     MENÚ
+============================ -->
+
+
+<nav>
+
+<div class="nav-container">
+
+<ul>
+
+<li>
+<a href="#inicio">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="#cronograma">
+Cronograma
+</a>
+</li>
+
+
+<li>
+<a href="#posters">
+Posters
+</a>
+</li>
+
+
+<li>
+<a href="#organizadores">
+Organizadores
+</a>
+</li>
+
+
+<li>
+<a href="#asistencia">
+Asistencia
+</a>
+</li>
+
+
+</ul>
+
+</div>
+
+</nav>
+
+
+
+<!-- ============================
+     LOGO / BANNER
+============================ -->
+
+
+<header class="banner">
+
+
+<img
+
+src="logoo.png"
+
+alt="Logo del evento"
+
+
+>
+
+
+</header>
+
+
+
+
+<!-- ============================
+     CONTENIDO PRINCIPAL
+============================ -->
+
+
+<main class="contenedor">
+
+
+
+<section id="inicio">
+
+
+<h1 class="titulo-seccion">
+
+Bienvenidos
+
+</h1>
+
+
+<div class="linea"></div>
+
+
+
+<div class="tarjeta">
+
+
+<p class="texto-centro">
+
+Bienvenidos al III Simposio de Interacciones Biológicas y Diversidad.
+
+</p>
+
+
+<br>
+
+
+<p class="texto-centro">
+
+En este espacio encontrarás el cronograma del evento,
+información de los organizadores, plantilla de posters
+y los mecanismos de asistencia.
+
+</p>
+
+
+</div>
+
+
+</section>
