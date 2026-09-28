@@ -3041,26 +3041,36 @@ Registro de Asistencia
 
 
 
-<div class="qr-contenedor">
+<div class="asistencia-card">
 
 
-<div class="qr-placeholder">
+<div class="qr-box">
 
 
-<div class="icono-qr">
+<div class="qr-icono">
 ▣
 </div>
 
 
 <h3>
-QR de asistencia
+Código QR de asistencia
 </h3>
 
 
 <p>
-El código QR estará disponible durante el desarrollo del evento
+
+El código QR estará disponible durante el evento
 para realizar el registro de asistencia.
+
 </p>
+
+
+<!--
+Cuando tengas el QR reemplaza este bloque por:
+
+<img src="qr.png" alt="Código QR de asistencia">
+
+-->
 
 
 </div>
@@ -3076,12 +3086,75 @@ para realizar el registro de asistencia.
 
 
 <!-- =====================================
-     FOOTER
+     SECCIÓN CONTACTO
 ===================================== -->
 
 
-</main>
+<section id="contacto">
 
+
+<h2 class="titulo-seccion">
+Contacto
+</h2>
+
+
+<div class="linea"></div>
+
+
+
+<div class="contacto-card">
+
+
+<h3>
+Información del evento
+</h3>
+
+
+
+<p>
+
+Para información adicional sobre el simposio,
+comunicarse con el equipo organizador.
+
+</p>
+
+
+
+<br>
+
+
+
+<p>
+
+📧
+
+<strong>
+Correo:
+</strong>
+
+
+<a href="mailto:correo@evento.com">
+
+correo@evento.com
+
+</a>
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- =====================================
+     PIE DE PÁGINA
+===================================== -->
 
 
 <footer>
@@ -3092,15 +3165,11 @@ III Simposio de Interacciones Biológicas y Diversidad
 </h3>
 
 
-<br>
-
 
 <p>
 Evento académico de divulgación científica
 </p>
 
-
-<br>
 
 
 <p>
@@ -3115,14 +3184,19 @@ Evento académico de divulgación científica
 
 
 <!-- =====================================
-     ESTILOS ASISTENCIA
+     ESTILOS PARTE 4
 ===================================== -->
 
 
 <style>
 
 
-.qr-contenedor {
+/* ===============================
+   ASISTENCIA
+================================ */
+
+
+.asistencia-card {
 
 
 display:flex;
@@ -3131,20 +3205,20 @@ display:flex;
 justify-content:center;
 
 
-align-items:center;
-
-
 }
 
 
 
-.qr-placeholder {
+.qr-box {
 
 
-width:320px;
+width:330px;
 
 
-min-height:320px;
+height:330px;
+
+
+background:white;
 
 
 border-radius:25px;
@@ -3153,11 +3227,6 @@ border-radius:25px;
 border:
 
 2px dashed var(--azul-principal);
-
-
-background:
-
-var(--azul-suave);
 
 
 display:flex;
@@ -3178,17 +3247,24 @@ text-align:center;
 padding:35px;
 
 
+box-shadow:
+
+0 10px 30px rgba(13,105,146,.12);
+
+
 }
 
 
 
-.icono-qr {
+.qr-icono {
 
 
 font-size:70px;
 
 
-color:var(--azul-principal);
+color:
+
+var(--azul-principal);
 
 
 margin-bottom:20px;
@@ -3198,7 +3274,7 @@ margin-bottom:20px;
 
 
 
-.qr-placeholder h3 {
+.qr-box h3 {
 
 
 color:
@@ -3209,14 +3285,11 @@ var(--azul-oscuro);
 font-size:25px;
 
 
-margin-bottom:15px;
-
-
 }
 
 
 
-.qr-placeholder p {
+.qr-box p {
 
 
 line-height:1.6;
@@ -3226,10 +3299,142 @@ line-height:1.6;
 
 
 
+
+
+/* ===============================
+   CONTACTO
+================================ */
+
+
+.contacto-card {
+
+
+max-width:700px;
+
+
+margin:auto;
+
+
+background:white;
+
+
+border-radius:20px;
+
+
+padding:40px;
+
+
+text-align:center;
+
+
+border:
+
+1px solid var(--borde);
+
+
+box-shadow:
+
+0 10px 30px rgba(13,105,146,.12);
+
+
+}
+
+
+
+.contacto-card h3 {
+
+
+color:
+
+var(--azul-oscuro);
+
+
+font-size:25px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.contacto-card p {
+
+
+line-height:1.7;
+
+
+}
+
+
+
+.contacto-card a {
+
+
+color:
+
+var(--azul-principal);
+
+
+font-weight:bold;
+
+
+text-decoration:none;
+
+
+}
+
+
+
+.contacto-card a:hover {
+
+
+text-decoration:underline;
+
+
+}
+
+
+
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+
+footer {
+
+
+margin-top:60px;
+
+
+background:
+
+var(--azul-oscuro);
+
+
+color:white;
+
+
+text-align:center;
+
+
+padding:35px 20px;
+
+
+}
+
+
+
 footer h3 {
 
 
-font-size:24px;
+margin-bottom:15px;
+
+
+font-size:22px;
 
 
 }
@@ -3239,17 +3444,53 @@ font-size:24px;
 footer p {
 
 
-opacity:.9;
+margin:8px;
 
 
 }
 
 
 
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+
+@media(max-width:600px){
+
+
+.qr-box {
+
+
+width:280px;
+
+
+height:280px;
+
+
+}
+
+
+
+.contacto-card {
+
+
+padding:25px;
+
+
+}
+
+
+
+}
+
 </style>
+
+
 
 
 
 </body>
 
-</html>
+</html> 
