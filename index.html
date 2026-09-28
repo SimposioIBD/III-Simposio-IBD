@@ -461,7 +461,7 @@ alt="Logo del evento"
 
 <h1 class="titulo-seccion">
 
-Bienvenidos
+Bienvenidos al III Simposio de Interacciones Biológicas y Diversidad.
 
 </h1>
 
@@ -475,7 +475,7 @@ Bienvenidos
 
 <p class="texto-centro">
 
-Bienvenidos al III Simposio de Interacciones Biológicas y Diversidad.
+Un espacio de encuentro para compartir conocimientos, fortalecer la colaboración académica y visibilizar la investigación en torno a las múltiples interacciones que sostienen la diversidad biológica. A través de conferencias, talleres y presentaciones estudiantiles, celebramos la ciencia como una herramienta para comprender, conservar y valorar la biodiversidad.
 
 </p>
 
@@ -607,25 +607,25 @@ Organización de material
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong> Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong> Hora:</strong>
 8:00 - 8:40
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong> Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong> Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -683,13 +683,13 @@ No esperes a que alguien más comunique tu ciencia
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong> Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong> Hora:</strong>
 9:00 - 9:45
 </p>
 
@@ -2182,6 +2182,87 @@ agradecimientos finales y finalización de la programación.
 
 </div>
 
+
+/* =====================================
+   COLORES POR TIPO DE EVENTO
+===================================== */
+
+
+.tipo-evento {
+
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:7px 15px;
+
+    font-weight:700;
+
+}
+
+
+
+/* Magistrales */
+
+.tipo-evento.magistral {
+
+    background:#084b69;
+
+}
+
+
+
+/* Ponencias */
+
+.tipo-evento.ponencia {
+
+    background:#168aad;
+
+}
+
+
+
+/* Charlas */
+
+.tipo-evento.charla {
+
+    background:#52b7c9;
+
+    color:#073b4c;
+
+}
+
+
+
+/* Posters */
+
+.tipo-evento.poster {
+
+    background:#3aa6a0;
+
+}
+
+
+
+/* Descansos */
+
+.tipo-evento.descanso {
+
+    background:#7b9eaa;
+
+}
+
+
+
+/* Inicio y cierre */
+
+.tipo-evento.inicio-cierre {
+
+    background:#0d6992;
+
+}
+
 <style>
 
 
@@ -2561,11 +2642,66 @@ document.querySelectorAll(".evento")
 
     evento.addEventListener("click",()=>{
 
-
         evento.classList.toggle("activo");
 
-
     });
+
+
+    let tipo = evento
+    .querySelector(".tipo-evento")
+    .innerText
+    .toLowerCase();
+
+
+
+    let etiqueta =
+    evento.querySelector(".tipo-evento");
+
+
+
+    if(tipo.includes("magistral")){
+
+        etiqueta.classList.add("magistral");
+
+    }
+
+
+    else if(tipo.includes("ponencia")){
+
+        etiqueta.classList.add("ponencia");
+
+    }
+
+
+    else if(tipo.includes("poster")){
+
+        etiqueta.classList.add("poster");
+
+    }
+
+
+    else if(tipo.includes("charla")){
+
+        etiqueta.classList.add("charla");
+
+    }
+
+
+    else if(tipo.includes("descanso")){
+
+        etiqueta.classList.add("descanso");
+
+    }
+
+
+    else if(
+    tipo.includes("inicio") ||
+    tipo.includes("cierre")
+    ){
+
+        etiqueta.classList.add("inicio-cierre");
+
+    }
 
 
 });
@@ -3126,7 +3262,6 @@ comunicarse con el equipo organizador.
 
 <p>
 
-📧
 
 <strong>
 Correo:
@@ -3135,7 +3270,7 @@ Correo:
 
 <a href="mailto:correo@evento.com">
 
-correo@evento.com
+simposioibd@udistrital.edu.co
 
 </a>
 
