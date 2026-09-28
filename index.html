@@ -12,35 +12,43 @@
 
 <style>
 
-/* ============================
-   PALETA PRINCIPAL
-============================ */
+
+/* =====================================
+   PALETA DE COLORES
+===================================== */
+
 
 :root {
 
-    --azul: #0d6992;
-    --azul-oscuro: #084b69;
-    --azul-claro: #e8f4f8;
+    --azul-principal:#0d6992;
 
-    --verde-complemento: #4f8a70;
+    --azul-oscuro:#084b69;
 
-    --blanco: #ffffff;
+    --azul-claro:#e8f4f8;
 
-    --gris-texto: #34495e;
+    --azul-suave:#f4fafc;
 
-    --borde: #d5e7ee;
+    --blanco:#ffffff;
+
+    --texto:#34495e;
+
+    --borde:#d5e7ee;
 
 }
 
 
-/* ============================
+
+/* =====================================
    CONFIGURACIÓN GENERAL
-============================ */
+===================================== */
+
 
 * {
 
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 
 }
@@ -62,14 +70,18 @@ body {
 
     background:white;
 
-    color:var(--gris-texto);
+    color:var(--texto);
+
+    overflow-x:hidden;
 
 }
 
 
-/* ============================
+
+/* =====================================
    NAVEGACIÓN
-============================ */
+===================================== */
+
 
 nav {
 
@@ -89,37 +101,38 @@ nav {
 }
 
 
+
 .nav-container {
 
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:15px 25px;
+    width:100%;
 
     display:flex;
 
     justify-content:center;
 
+    padding:15px;
+
 }
 
 
-nav ul {
+
+.nav-container ul {
 
     list-style:none;
 
     display:flex;
 
-    flex-wrap:wrap;
-
     justify-content:center;
+
+    flex-wrap:wrap;
 
     gap:10px;
 
 }
 
 
-nav a {
+
+.nav-container a {
 
     text-decoration:none;
 
@@ -127,7 +140,7 @@ nav a {
 
     font-weight:600;
 
-    padding:8px 15px;
+    padding:8px 16px;
 
     border-radius:8px;
 
@@ -136,42 +149,34 @@ nav a {
 }
 
 
-nav a:hover {
+
+.nav-container a:hover {
 
     background:var(--azul-claro);
 
-    color:var(--azul);
+    color:var(--azul-principal);
 
 }
 
 
 
-/* ============================
-   BANNER PRINCIPAL
-============================ */
+/* =====================================
+   BANNER DEL LOGO
+   OCUPA TODO EL ANCHO
+===================================== */
 
 
 .banner {
 
     width:100%;
 
-    background:
+    margin:0;
 
-    linear-gradient(
-    135deg,
-    #ffffff,
-    #e8f4f8
-    );
+    padding:0;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    background:white;
 
     overflow:hidden;
-
-    padding:25px 0;
 
 }
 
@@ -181,21 +186,23 @@ nav a:hover {
 
     width:100%;
 
-    max-width:1200px;
-
     height:auto;
 
     display:block;
 
-    object-fit:contain;
+    max-width:none;
+
+    margin:0;
+
+    padding:0;
 
 }
 
 
 
-/* ============================
-   CONTENIDO
-============================ */
+/* =====================================
+   CONTENEDOR
+===================================== */
 
 
 .contenedor {
@@ -218,15 +225,20 @@ section {
 
 
 
+/* =====================================
+   TÍTULOS
+===================================== */
+
+
 .titulo-seccion {
 
     text-align:center;
 
-    color:var(--azul);
+    color:var(--azul-principal);
 
-    font-size:36px;
+    font-size:38px;
 
-    margin-bottom:20px;
+    margin-bottom:15px;
 
 }
 
@@ -238,33 +250,20 @@ section {
 
     height:4px;
 
-    background:var(--azul);
+    background:var(--azul-principal);
 
-    margin:0 auto 35px;
+    margin:
+    0 auto 35px;
 
-    border-radius:10px;
-
-}
-
-
-
-.texto-centro {
-
-    text-align:center;
-
-    max-width:800px;
-
-    margin:auto;
-
-    font-size:18px;
+    border-radius:20px;
 
 }
 
 
 
-/* ============================
+/* =====================================
    TARJETAS
-============================ */
+===================================== */
 
 
 .tarjeta {
@@ -281,15 +280,36 @@ section {
 
     box-shadow:
 
-    0 10px 30px rgba(13,105,146,.10);
+    0 10px 30px rgba(13,105,146,.12);
 
 }
 
 
 
-/* ============================
-   PIE DE PAGINA
-============================ */
+/* =====================================
+   TEXTO INICIAL
+===================================== */
+
+
+.texto-centro {
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
 
 
 footer {
@@ -306,37 +326,38 @@ footer {
 
 
 
-/* ============================
-   CELULAR
-============================ */
+/* =====================================
+   ADAPTACIÓN MÓVIL
+===================================== */
 
 
 @media(max-width:700px){
 
 
-.banner img {
+.nav-container a {
 
-    width:100%;
+    font-size:13px;
+
+    padding:7px 10px;
 
 }
 
 
 .titulo-seccion {
 
-    font-size:28px;
+    font-size:30px;
 
 }
 
 
-nav a {
+.tarjeta {
 
-    font-size:13px;
-
-}
-
+    padding:22px;
 
 }
 
+
+}
 
 </style>
 
@@ -344,12 +365,14 @@ nav a {
 </head>
 
 
+
 <body>
 
 
-<!-- ============================
+
+<!-- =====================================
      MENÚ
-============================ -->
+===================================== -->
 
 
 <nav>
@@ -357,6 +380,7 @@ nav a {
 <div class="nav-container">
 
 <ul>
+
 
 <li>
 <a href="#inicio">
@@ -401,9 +425,9 @@ Asistencia
 
 
 
-<!-- ============================
-     LOGO / BANNER
-============================ -->
+<!-- =====================================
+     LOGO PRINCIPAL
+===================================== -->
 
 
 <header class="banner">
@@ -423,10 +447,9 @@ alt="Logo del evento"
 
 
 
-
-<!-- ============================
-     CONTENIDO PRINCIPAL
-============================ -->
+<!-- =====================================
+     CONTENIDO
+===================================== -->
 
 
 <main class="contenedor">
@@ -462,8 +485,8 @@ Bienvenidos al III Simposio de Interacciones Biológicas y Diversidad.
 
 <p class="texto-centro">
 
-En este espacio encontrarás el cronograma del evento,
-información de los organizadores, plantilla de posters
+En esta página encontrarás el cronograma del evento,
+la información de los organizadores, la plantilla de posters
 y los mecanismos de asistencia.
 
 </p>
