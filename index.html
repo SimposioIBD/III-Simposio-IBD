@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
@@ -15,118 +13,214 @@ III Simposio de Interacciones Biológicas y Diversidad
 
 <style>
 
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f7f4;
-    color:#333;
+:root{
+--verde:#174d3b;
+--verde-claro:#2d8064;
+--azul:#0d5c75;
+--fondo:#f5f8f6;
+--blanco:#ffffff;
+--texto:#24312c;
 }
+
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+
+margin:0;
+font-family:'Segoe UI',Arial,sans-serif;
+background:var(--fondo);
+color:var(--texto);
+
+}
+
 
 
 header{
 
-    background:#1f5f4a;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
+background:
+linear-gradient(
+135deg,
+rgba(13,92,117,0.95),
+rgba(23,77,59,0.95)
+);
+
+color:white;
+text-align:center;
+padding:40px 20px;
 
 }
 
 
+
+.logo{
+
+width:220px;
+max-width:80%;
+margin-bottom:20px;
+
+}
+
+
+
 header h1{
 
-    margin:0;
-    font-size:40px;
+font-size:40px;
+margin:10px 0;
 
 }
 
 
 header p{
 
-    font-size:20px;
+font-size:20px;
 
 }
+
 
 
 
 .container{
 
-    width:85%;
-    margin:auto;
-    padding:30px;
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:30px 0;
 
 }
 
 
 
-.card{
 
-    background:white;
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:15px;
-    box-shadow:0px 3px 10px rgba(0,0,0,0.15);
+.panel{
+
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+margin-bottom:30px;
 
 }
+
 
 
 
 h2{
 
-    color:#1f5f4a;
+color:var(--verde);
 
 }
 
 
 
-table{
+.filtros{
 
-    width:100%;
-    border-collapse:collapse;
-
-}
-
-
-
-th{
-
-    background:#1f5f4a;
-    color:white;
-    padding:12px;
+display:flex;
+flex-wrap:wrap;
+gap:15px;
 
 }
 
 
 
-td{
 
-    padding:12px;
-    border-bottom:1px solid #ddd;
+select,input{
+
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+
+}
+
+
+
+
+.actividades{
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:20px;
 
 }
 
 
 
-tr:hover{
 
-    background:#eef5ef;
+.card{
+
+background:white;
+border-left:8px solid var(--verde-claro);
+padding:20px;
+border-radius:15px;
+
+box-shadow:
+0 4px 12px rgba(0,0,0,.1);
+
+transition:.3s;
 
 }
+
+
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+.hora{
+
+font-size:18px;
+font-weight:bold;
+color:var(--azul);
+
+}
+
+
+
+.tipo{
+
+display:inline-block;
+background:#dcefe8;
+color:var(--verde);
+padding:5px 12px;
+border-radius:20px;
+margin:10px 0;
+
+}
+
 
 
 
 footer{
 
-    background:#1f5f4a;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:var(--verde);
+color:white;
+text-align:center;
+padding:25px;
 
 }
 
 
 
-@media(max-width:700px){
+.oculto{
+
+display:none;
+
+}
+
+
+
+@media(max-width:600px){
 
 header h1{
 
@@ -134,21 +228,8 @@ font-size:28px;
 
 }
 
-.container{
-
-width:95%;
 
 }
-
-
-table{
-
-font-size:14px;
-
-}
-
-}
-
 
 </style>
 
@@ -156,18 +237,26 @@ font-size:14px;
 </head>
 
 
+
 <body>
 
 
+
 <header>
+
+
+<img src="logo.png" class="logo">
+
 
 <h1>
 III Simposio de Interacciones Biológicas y Diversidad
 </h1>
 
+
 <p>
-Cronograma oficial del evento
+"De las redes biológicas a la investigación científica"
 </p>
+
 
 </header>
 
@@ -176,186 +265,323 @@ Cronograma oficial del evento
 <div class="container">
 
 
-<div class="card">
+
+<div class="panel">
+
 
 <h2>
-Sobre el evento
+Cronograma del evento
 </h2>
 
-<p>
-El III Simposio de Interacciones Biológicas y Diversidad reúne estudiantes,
-investigadores y profesionales interesados en la biodiversidad,
-las interacciones ecológicas y los avances en investigación biológica.
-</p>
+
+<div class="filtros">
+
+
+<select id="dia">
+
+<option value="todos">
+Todos los días
+</option>
+
+<option value="5">
+5 de octubre
+</option>
+
+<option value="6">
+6 de octubre
+</option>
+
+
+</select>
+
+
+
+
+<select id="momento">
+
+
+<option value="todos">
+Todo el día
+</option>
+
+
+<option value="manana">
+Mañana
+</option>
+
+
+<option value="tarde">
+Tarde
+</option>
+
+
+</select>
+
+
+
+<input 
+type="text"
+id="buscar"
+placeholder="Buscar actividad o ponente..."
+>
+
+
+</div>
+
 
 </div>
 
 
 
-<div class="card">
 
-<h2>
-Cronograma de actividades
-</h2>
+<div id="lista" class="actividades">
 
+<!-- ACTIVIDADES DEL CRONOGRAMA -->
 
-<table>
+<div class="card actividad"
+data-dia="5"
+data-momento="manana">
 
+<div class="hora">
+8:00 a.m. - 8:30 a.m.
+</div>
 
-<tr>
+<span class="tipo">
+Apertura
+</span>
 
-<th>
-Hora
-</th>
-
-<th>
-Actividad
-</th>
-
-<th>
-Participantes
-</th>
-
-</tr>
-
-
-
-<tr>
-
-<td>
-8:00 - 8:30 a.m.
-</td>
-
-<td>
+<h3>
 Registro de participantes
-</td>
+</h3>
 
-<td>
-Organización del evento
-</td>
+<p>
+Recepción y registro de asistentes al III Simposio de Interacciones Biológicas y Diversidad.
+</p>
 
-</tr>
-
-
-
-<tr>
-
-<td>
-8:30 - 9:00 a.m.
-</td>
-
-<td>
-Apertura del III Simposio de Interacciones Biológicas y Diversidad
-</td>
-
-<td>
-Comité organizador
-</td>
-
-</tr>
+</div>
 
 
 
-<tr>
+<div class="card actividad"
+data-dia="5"
+data-momento="manana">
 
-<td>
-9:00 - 10:00 a.m.
-</td>
+<div class="hora">
+8:30 a.m. - 9:00 a.m.
+</div>
 
-<td>
-Conferencia inaugural
-</td>
+<span class="tipo">
+Instalación
+</span>
 
-<td>
-Invitado especial
-</td>
+<h3>
+Apertura del evento
+</h3>
 
-</tr>
+<p>
+Palabras de bienvenida e inicio del III Simposio de Interacciones Biológicas y Diversidad.
+</p>
+
+</div>
 
 
 
-<tr>
+<div class="card actividad"
+data-dia="5"
+data-momento="manana">
 
-<td>
-10:00 - 10:30 a.m.
-</td>
+<div class="hora">
+9:00 a.m. - 10:30 a.m.
+</div>
 
-<td>
+<span class="tipo">
+Charlas estudiantiles
+</span>
+
+<h3>
+Presentación de trabajos de estudiantes
+</h3>
+
+<p>
+Exposición de proyectos de investigación estudiantil.
+</p>
+
+</div>
+
+
+
+<div class="card actividad"
+data-dia="5"
+data-momento="manana">
+
+<div class="hora">
+10:30 a.m. - 11:00 a.m.
+</div>
+
+<span class="tipo">
 Receso
-</td>
+</span>
 
-<td>
-Participantes
-</td>
+<h3>
+Refrigerio
+</h3>
 
-</tr>
+<p>
+Espacio de descanso y encuentro entre participantes.
+</p>
 
-
-
-<tr>
-
-<td>
-10:30 - 12:00 m.
-</td>
-
-<td>
-Presentación de ponencias
-</td>
-
-<td>
-Estudiantes e investigadores
-</td>
-
-</tr>
+</div>
 
 
 
-<tr>
+<div class="card actividad"
+data-dia="5"
+data-momento="manana">
 
-<td>
-2:00 - 5:00 p.m.
-</td>
+<div class="hora">
+11:00 a.m. - 12:00 m.
+</div>
 
-<td>
-Talleres y actividades académicas
-</td>
+<span class="tipo">
+Conferencia magistral
+</span>
 
-<td>
-Participantes inscritos
-</td>
+<h3>
+Conferencia invitada
+</h3>
 
-</tr>
+<p>
+Presentación académica dentro del marco del simposio.
+</p>
+
+</div>
 
 
 
-</table>
+<div class="card actividad"
+data-dia="5"
+data-momento="tarde">
 
+<div class="hora">
+2:00 p.m. - 5:00 p.m.
+</div>
+
+<span class="tipo">
+Taller
+</span>
+
+<h3>
+Talleres académicos
+</h3>
+
+<p>
+Actividades teórico-prácticas del evento.
+</p>
 
 </div>
 
 
 
 
-<div class="card">
+
+<!-- DÍA 6 -->
 
 
-<h2>
-Lugar del evento
-</h2>
+<div class="card actividad"
+data-dia="6"
+data-momento="manana">
 
+<div class="hora">
+8:00 a.m. - 10:30 a.m.
+</div>
+
+<span class="tipo">
+Ponencias
+</span>
+
+<h3>
+Presentaciones académicas
+</h3>
 
 <p>
-Universidad Distrital Francisco José de Caldas
+Ponencias de investigadores y estudiantes participantes.
 </p>
-
-
-<p>
-Fecha: agregar fecha del evento
-</p>
-
 
 </div>
 
+
+
+<div class="card actividad"
+data-dia="6"
+data-momento="manana">
+
+<div class="hora">
+10:30 a.m. - 11:00 a.m.
+</div>
+
+<span class="tipo">
+Receso
+</span>
+
+<h3>
+Refrigerio
+</h3>
+
+<p>
+Espacio de integración entre asistentes.
+</p>
+
+</div>
+
+
+
+<div class="card actividad"
+data-dia="6"
+data-momento="manana">
+
+<div class="hora">
+11:00 a.m. - 12:30 p.m.
+</div>
+
+<span class="tipo">
+Sesión académica
+</span>
+
+<h3>
+Charlas y presentaciones científicas
+</h3>
+
+<p>
+Socialización de investigaciones relacionadas con biodiversidad e interacciones biológicas.
+</p>
+
+</div>
+
+
+
+<div class="card actividad"
+data-dia="6"
+data-momento="tarde">
+
+<div class="hora">
+2:00 p.m. - 5:00 p.m.
+</div>
+
+<span class="tipo">
+Clausura
+</span>
+
+<h3>
+Cierre del III Simposio de Interacciones Biológicas y Diversidad
+</h3>
+
+<p>
+Actividad de cierre y reconocimiento a participantes.
+</p>
+
+</div>
+
+</div>
 
 
 </div>
@@ -364,13 +590,114 @@ Fecha: agregar fecha del evento
 
 <footer>
 
-III Simposio de Interacciones Biológicas y Diversidad
+III Simposio de Interacciones Biológicas y Diversidad<br>
+
+Universidad Distrital Francisco José de Caldas
 
 </footer>
 
 
 
-</body>
+<script>
 
+
+const dia = document.getElementById("dia");
+
+const momento = document.getElementById("momento");
+
+const buscar = document.getElementById("buscar");
+
+const actividades = document.querySelectorAll(".actividad");
+
+
+
+function filtrar(){
+
+
+let valorDia = dia.value;
+
+let valorMomento = momento.value;
+
+let texto = buscar.value.toLowerCase();
+
+
+
+actividades.forEach(function(card){
+
+
+
+let coincideDia =
+valorDia === "todos" ||
+card.dataset.dia === valorDia;
+
+
+
+let coincideMomento =
+valorMomento === "todos" ||
+card.dataset.momento === valorMomento;
+
+
+
+let contenido =
+card.innerText.toLowerCase();
+
+
+
+let coincideTexto =
+contenido.includes(texto);
+
+
+
+if(
+coincideDia &&
+coincideMomento &&
+coincideTexto
+){
+
+card.classList.remove("oculto");
+
+}
+
+else{
+
+card.classList.add("oculto");
+
+}
+
+
+});
+
+
+}
+
+
+
+
+dia.addEventListener(
+"change",
+filtrar
+);
+
+
+
+momento.addEventListener(
+"change",
+filtrar
+);
+
+
+
+buscar.addEventListener(
+"keyup",
+filtrar
+);
+
+
+
+</script>
+
+
+
+</body>
 
 </html>
