@@ -7,96 +7,115 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>III Simposio de Interacciones Biológicas y Diversidad</title>
+
+<title>
+III Simposio de Interacciones Biológicas y Diversidad
+</title>
+
 
 
 <style>
 
 
-/* =====================================
+/* ===============================
    PALETA DE COLORES
-===================================== */
+================================ */
 
 
 :root {
 
-    --azul-principal:#0d6992;
 
-    --azul-oscuro:#084b69;
+--azul:#0d6992;
 
-    --azul-claro:#e8f4f8;
+--azul-oscuro:#084b69;
 
-    --azul-suave:#f4fafc;
+--azul-claro:#dff1f7;
 
-    --blanco:#ffffff;
+--turquesa:#3aa6a0;
 
-    --texto:#34495e;
+--gris-azul:#7895a3;
 
-    --borde:#d5e7ee;
+--blanco:#ffffff;
+
+--texto:#34495e;
+
+--borde:#d7e6ec;
+
 
 }
 
 
 
-/* =====================================
-   CONFIGURACIÓN GENERAL
-===================================== */
+
+
+/* ===============================
+   GENERAL
+================================ */
 
 
 * {
 
-    margin:0;
+margin:0;
 
-    padding:0;
+padding:0;
 
-    box-sizing:border-box;
+box-sizing:border-box;
 
 }
+
 
 
 html {
 
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 
 }
+
 
 
 body {
 
-    font-family:
-    "Segoe UI",
-    Arial,
-    sans-serif;
 
-    background:white;
+font-family:
 
-    color:var(--texto);
+"Segoe UI",
+Arial,
+sans-serif;
 
-    overflow-x:hidden;
+
+background:white;
+
+
+color:var(--texto);
+
 
 }
 
 
 
-/* =====================================
+
+/* ===============================
    NAVEGACIÓN
-===================================== */
+================================ */
 
 
 nav {
 
-    width:100%;
 
-    background:white;
+position:sticky;
 
-    position:sticky;
+top:0;
 
-    top:0;
+z-index:1000;
 
-    z-index:1000;
 
-    border-bottom:
-    1px solid var(--borde);
+background:white;
+
+
+border-bottom:
+
+1px solid var(--borde);
+
 
 }
 
@@ -104,13 +123,13 @@ nav {
 
 .nav-container {
 
-    width:100%;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    padding:15px;
+padding:15px;
+
 
 }
 
@@ -118,15 +137,15 @@ nav {
 
 .nav-container ul {
 
-    list-style:none;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+list-style:none;
 
-    flex-wrap:wrap;
+gap:12px;
 
-    gap:10px;
+flex-wrap:wrap;
+
 
 }
 
@@ -134,17 +153,20 @@ nav {
 
 .nav-container a {
 
-    text-decoration:none;
 
-    color:var(--azul-oscuro);
+text-decoration:none;
 
-    font-weight:600;
+color:var(--azul-oscuro);
 
-    padding:8px 16px;
+font-weight:600;
 
-    border-radius:8px;
+padding:10px 18px;
 
-    transition:.3s;
+border-radius:10px;
+
+
+transition:.3s;
+
 
 }
 
@@ -152,31 +174,32 @@ nav {
 
 .nav-container a:hover {
 
-    background:var(--azul-claro);
 
-    color:var(--azul-principal);
+background:var(--azul-claro);
+
 
 }
 
 
 
-/* =====================================
-   BANNER DEL LOGO
-   OCUPA TODO EL ANCHO
-===================================== */
+
+
+/* ===============================
+   LOGO PRINCIPAL
+================================ */
 
 
 .banner {
 
-    width:100%;
 
-    margin:0;
+width:100%;
 
-    padding:0;
+padding:0;
 
-    background:white;
+margin:0;
 
-    overflow:hidden;
+overflow:hidden;
+
 
 }
 
@@ -184,34 +207,33 @@ nav {
 
 .banner img {
 
-    width:100%;
 
-    height:auto;
+width:100%;
 
-    display:block;
+height:auto;
 
-    max-width:none;
+display:block;
 
-    margin:0;
-
-    padding:0;
 
 }
 
 
 
-/* =====================================
+
+/* ===============================
    CONTENEDOR
-===================================== */
+================================ */
 
 
 .contenedor {
 
-    width:90%;
 
-    max-width:1200px;
+width:90%;
 
-    margin:auto;
+max-width:1200px;
+
+margin:auto;
+
 
 }
 
@@ -219,26 +241,35 @@ nav {
 
 section {
 
-    padding:70px 0;
+
+padding:70px 0;
+
 
 }
 
 
 
-/* =====================================
-   TÍTULOS
-===================================== */
+
+
+/* ===============================
+   TITULOS
+================================ */
 
 
 .titulo-seccion {
 
-    text-align:center;
 
-    color:var(--azul-principal);
+text-align:center;
 
-    font-size:38px;
 
-    margin-bottom:15px;
+font-size:38px;
+
+
+color:var(--azul);
+
+
+margin-bottom:15px;
+
 
 }
 
@@ -246,118 +277,126 @@ section {
 
 .linea {
 
-    width:70px;
 
-    height:4px;
+height:4px;
 
-    background:var(--azul-principal);
 
-    margin:
-    0 auto 35px;
+width:80px;
 
-    border-radius:20px;
+
+background:var(--azul);
+
+
+margin:
+
+auto auto 35px;
+
+
+border-radius:20px;
+
 
 }
 
 
 
-/* =====================================
+
+/* ===============================
    TARJETAS
-===================================== */
+================================ */
 
 
 .tarjeta {
 
-    background:white;
 
-    border:
+background:white;
 
-    1px solid var(--borde);
 
-    border-radius:18px;
+border:
 
-    padding:35px;
+1px solid var(--borde);
 
-    box-shadow:
 
-    0 10px 30px rgba(13,105,146,.12);
+border-radius:20px;
+
+
+padding:35px;
+
+
+box-shadow:
+
+0 10px 30px rgba(13,105,146,.12);
+
 
 }
 
 
-
-/* =====================================
-   TEXTO INICIAL
-===================================== */
 
 
 .texto-centro {
 
-    text-align:center;
 
-    max-width:850px;
+text-align:center;
 
-    margin:auto;
 
-    font-size:18px;
+font-size:18px;
 
-    line-height:1.7;
+
+line-height:1.7;
+
 
 }
 
 
 
-/* =====================================
-   FOOTER
-===================================== */
+
+/* ===============================
+   FOOTER BASE
+================================ */
 
 
 footer {
 
-    background:var(--azul-oscuro);
 
-    color:white;
+background:var(--azul-oscuro);
 
-    text-align:center;
 
-    padding:35px;
+color:white;
+
+
+text-align:center;
+
+
+padding:35px;
+
 
 }
 
 
 
-/* =====================================
-   ADAPTACIÓN MÓVIL
-===================================== */
 
 
 @media(max-width:700px){
 
 
-.nav-container a {
+.titulo-seccion{
 
-    font-size:13px;
-
-    padding:7px 10px;
+font-size:30px;
 
 }
 
 
-.titulo-seccion {
+.nav-container a{
 
-    font-size:30px;
+font-size:13px;
 
-}
-
-
-.tarjeta {
-
-    padding:22px;
+padding:8px 10px;
 
 }
 
 
 }
+
+
 
 </style>
 
@@ -370,14 +409,12 @@ footer {
 
 
 
-<!-- =====================================
-     MENÚ
-===================================== -->
-
 
 <nav>
 
+
 <div class="nav-container">
+
 
 <ul>
 
@@ -417,42 +454,39 @@ Asistencia
 </li>
 
 
+<li>
+<a href="#contacto">
+Contacto
+</a>
+</li>
+
+
 </ul>
 
+
 </div>
+
 
 </nav>
 
 
 
-<!-- =====================================
-     LOGO PRINCIPAL
-===================================== -->
-
 
 <header class="banner">
 
 
-<img
-
-src="logoo.png"
-
-alt="Logo del evento"
-
-
->
+<img src="logoo.png" alt="Logo del evento">
 
 
 </header>
 
 
 
-<!-- =====================================
-     CONTENIDO
-===================================== -->
 
 
 <main class="contenedor">
+
+
 
 
 
@@ -461,7 +495,7 @@ alt="Logo del evento"
 
 <h1 class="titulo-seccion">
 
-Bienvenidos al III Simposio de Interacciones Biológicas y Diversidad.
+Bienvenidos
 
 </h1>
 
@@ -475,7 +509,7 @@ Bienvenidos al III Simposio de Interacciones Biológicas y Diversidad.
 
 <p class="texto-centro">
 
-Un espacio de encuentro para compartir conocimientos, fortalecer la colaboración académica y visibilizar la investigación en torno a las múltiples interacciones que sostienen la diversidad biológica. A través de conferencias, talleres y presentaciones estudiantiles, celebramos la ciencia como una herramienta para comprender, conservar y valorar la biodiversidad.
+III Simposio de Interacciones Biológicas y Diversidad.
 
 </p>
 
@@ -485,17 +519,13 @@ Un espacio de encuentro para compartir conocimientos, fortalecer la colaboració
 
 <p class="texto-centro">
 
-En esta página encontrarás el cronograma del evento,
-la información de los organizadores, la plantilla de posters
-y los mecanismos de asistencia.
+Espacio académico para la divulgación científica,
+intercambio de conocimiento y presentación de investigaciones.
 
 </p>
 
 
 </div>
-
-
-</section>
 
 <!-- =====================================
      CRONOGRAMA
@@ -506,7 +536,7 @@ y los mecanismos de asistencia.
 
 
 <h2 class="titulo-seccion">
-Cronograma
+Cronograma del Evento
 </h2>
 
 
@@ -514,40 +544,24 @@ Cronograma
 
 
 
-<p class="texto-centro">
-
-Consulta las actividades del III Simposio de Interacciones Biológicas y Diversidad.
-
-Haz clic en cada actividad para consultar información adicional.
-
-</p>
-
-
-
-<br>
-
-
-
-<!-- =====================================
-     FILTROS
-===================================== -->
-
-
 <div class="filtros-cronograma">
 
 
 <select id="filtro-dia">
 
+
 <option value="todos">
 Todos los días
 </option>
 
+
 <option value="5">
-5 de octubre
+5 de Octubre
 </option>
 
+
 <option value="6">
-6 de octubre
+6 de Octubre
 </option>
 
 
@@ -555,13 +569,13 @@ Todos los días
 
 
 
-<input
+<input 
 
 type="text"
 
 id="buscar-actividad"
 
-placeholder="Buscar actividad o conferencista..."
+placeholder="Buscar actividad, autor o título..."
 
 >
 
@@ -570,14 +584,13 @@ placeholder="Buscar actividad o conferencista..."
 
 
 
-<!-- =====================================
-     DÍA 5 DE OCTUBRE
-===================================== -->
 
 
-<h2 class="dia-titulo">
-📅 5 de Octubre
-</h2>
+<h3 class="dia-titulo">
+5 de Octubre
+</h3>
+
+
 
 
 
@@ -585,18 +598,17 @@ placeholder="Buscar actividad o conferencista..."
 
 
 
+
+
 <!-- EVENTO 1 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento inicio-cierre">
 Inicio de Simposio
 </span>
 
@@ -607,25 +619,25 @@ Organización de material
 
 
 <p>
-<strong> Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong> Hora:</strong>
+<strong>Hora:</strong>
 8:00 - 8:40
 </p>
 
 
 <p>
-<strong> Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong> Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -644,10 +656,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Actividad inicial destinada a la organización del material necesario para el desarrollo del simposio.
+Organización inicial del material necesario
+para el desarrollo del simposio.
 
 </p>
 
@@ -663,16 +675,13 @@ Actividad inicial destinada a la organización del material necesario para el de
 
 <!-- EVENTO 2 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento magistral">
 Magistral 1 (40 min)
 </span>
 
@@ -683,25 +692,25 @@ No esperes a que alguien más comunique tu ciencia
 
 
 <p>
-<strong> Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong> Hora:</strong>
+<strong>Hora:</strong>
 9:00 - 9:45
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Carlos Guarnizo - Transversal
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -720,10 +729,11 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Charla magistral sobre comunicación científica y la importancia de divulgar el conocimiento generado desde la investigación.
+Conferencia magistral enfocada en la comunicación
+de la ciencia y las estrategias para divulgar
+los resultados de investigación.
 
 </p>
 
@@ -739,16 +749,13 @@ Charla magistral sobre comunicación científica y la importancia de divulgar el
 
 <!-- EVENTO 3 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento descanso">
 Descanso
 </span>
 
@@ -759,25 +766,25 @@ Refrigerio
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 10:00 - 10:30
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -796,10 +803,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Espacio destinado al descanso y encuentro entre asistentes.
+Espacio destinado al descanso y refrigerio
+de los asistentes.
 
 </p>
 
@@ -815,16 +822,13 @@ Espacio destinado al descanso y encuentro entre asistentes.
 
 <!-- EVENTO 4 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento ponencia">
 Ponencia 1
 </span>
 
@@ -835,25 +839,25 @@ Evaluación de la acción antagónica in vitro de levaduras frente a hongos fito
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 10:30 - 10:50
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Dayan Lorena Velandia Guillén
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -872,10 +876,11 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Presentación de investigación relacionada con interacciones entre microorganismos y hongos fitopatógenos.
+Presentación de resultados de investigación relacionados
+con microorganismos y su potencial aplicación frente
+a hongos fitopatógenos.
 
 </p>
 
@@ -885,22 +890,15 @@ Presentación de investigación relacionada con interacciones entre microorganis
 
 </div>
 
-
-
-
-
 <!-- EVENTO 5 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento ponencia">
 Ponencia 2
 </span>
 
@@ -911,25 +909,25 @@ Cuando cambia el clima cambian las conexiones: Redes ecológicas, preguntas abie
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 11:10 - 11:20
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Juan David Parra-Cañón (Egresado UD)
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -948,10 +946,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Presentación sobre redes ecológicas y los retos asociados a los cambios ambientales actuales.
+Presentación sobre redes ecológicas, relaciones entre
+organismos y los retos asociados al cambio ambiental.
 
 </p>
 
@@ -961,18 +959,19 @@ Presentación sobre redes ecológicas y los retos asociados a los cambios ambien
 
 </div>
 
+
+
+
+
 <!-- EVENTO 6 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento magistral">
 Magistral 2 (40 min)
 </span>
 
@@ -983,30 +982,31 @@ Una historia de montaña, resiliencia y conservación
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 11:30 - 12:10
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Wendy Franco (PNN Chingaza)
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1021,9 +1021,8 @@ Presencial
 <p>
 <strong>Descripción:</strong>
 
-Charla magistral relacionada con procesos de conservación,
-ecosistemas de montaña y experiencias asociadas al Parque
-Nacional Natural Chingaza.
+Conferencia relacionada con experiencias de conservación,
+ecosistemas de montaña y procesos de resiliencia.
 
 </p>
 
@@ -1039,16 +1038,13 @@ Nacional Natural Chingaza.
 
 <!-- EVENTO 7 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento descanso">
 Descanso
 </span>
 
@@ -1059,30 +1055,31 @@ Almuerzo
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 12:30 - 2:00
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 N/A
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1097,7 +1094,8 @@ Presencial
 <p>
 <strong>Descripción:</strong>
 
-Espacio destinado al descanso y alimentación de los participantes.
+Espacio destinado al almuerzo y descanso
+de los participantes.
 
 </p>
 
@@ -1113,16 +1111,13 @@ Espacio destinado al descanso y alimentación de los participantes.
 
 <!-- EVENTO 8 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento magistral">
 Magistral 3 (40 min)
 </span>
 
@@ -1133,30 +1128,31 @@ Plantas parásitas, de organismos nocivos a recursos genéticos promisorios
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 2:00 - 2:40
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Edison Cardona Medina
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1171,8 +1167,8 @@ Presencial
 <p>
 <strong>Descripción:</strong>
 
-Presentación sobre la diversidad, importancia biológica
-y potencial de las plantas parásitas como recursos genéticos.
+Charla sobre plantas parásitas, su importancia biológica
+y su potencial como recursos genéticos.
 
 </p>
 
@@ -1188,16 +1184,13 @@ y potencial de las plantas parásitas como recursos genéticos.
 
 <!-- EVENTO 9 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento remota">
 Magistral - Remota
 </span>
 
@@ -1208,30 +1201,31 @@ Integridad vertical del ecosistema anquihalino en la península de Yucatán
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 2:50 - 3:30
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Fernando Alvarez Noguera - México
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1246,8 +1240,8 @@ Remota
 <p>
 <strong>Descripción:</strong>
 
-Conferencia sobre ecosistemas anquihalinos y los procesos
-ecológicos que ocurren en estos ambientes particulares.
+Conferencia enfocada en ecosistemas anquihalinos
+y sus características ecológicas.
 
 </p>
 
@@ -1263,16 +1257,13 @@ ecológicos que ocurren en estos ambientes particulares.
 
 <!-- EVENTO 10 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento ponencia">
 Ponencia 4
 </span>
 
@@ -1283,30 +1274,31 @@ Ponencia 4
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 3:20 - 3:40
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Mabel de Jesús Alarcón - México
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1321,7 +1313,7 @@ Presencial
 <p>
 <strong>Descripción:</strong>
 
-Ponencia sobre las relaciones entre ecosistemas forestales
+Presentación sobre interacciones entre organismos forestales
 tropicales y hongos.
 
 </p>
@@ -1338,16 +1330,13 @@ tropicales y hongos.
 
 <!-- EVENTO 11 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento magistral">
 Magistral 4 (40 min)
 </span>
 
@@ -1358,30 +1347,31 @@ Microorganismos para una producción forestal sostenible
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
-3:50 - 4:30
+<strong>Hora:</strong>
+4:40 - 5:00
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Antonio Andrade Torres - México
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1396,8 +1386,8 @@ Presencial
 <p>
 <strong>Descripción:</strong>
 
-Charla sobre el papel de los microorganismos en estrategias
-de producción forestal sostenible.
+Conferencia sobre el papel de microorganismos
+en sistemas forestales sostenibles.
 
 </p>
 
@@ -1413,16 +1403,13 @@ de producción forestal sostenible.
 
 <!-- EVENTO 12 -->
 
-
-<div class="evento"
-
-data-dia="5">
+<div class="evento" data-dia="5">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento inicio-cierre">
 Cierre
 </span>
 
@@ -1433,30 +1420,31 @@ Cierre del evento
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 5 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 4:40 - 5:00
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
 
 </div>
+
 
 
 <div class="evento-detalle">
@@ -1471,7 +1459,8 @@ Presencial
 <p>
 <strong>Descripción:</strong>
 
-Cierre de la primera jornada del simposio.
+Cierre de las actividades programadas para la primera jornada
+del simposio.
 
 </p>
 
@@ -1486,25 +1475,23 @@ Cierre de la primera jornada del simposio.
 ===================================== -->
 
 
-<h2 class="dia-titulo">
-📅 6 de Octubre
-</h2>
+<h3 class="dia-titulo">
+6 de Octubre
+</h3>
+
 
 
 
 
 <!-- EVENTO 13 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento inicio-cierre">
 Inicio de Simposio
 </span>
 
@@ -1515,25 +1502,25 @@ Organización de pósters y fotografías
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 8:00 - 8:15
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -1552,11 +1539,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Organización inicial de los espacios destinados a la presentación
-de pósters y fotografías científicas.
+Organización inicial de los espacios destinados
+a la presentación de pósters y fotografías científicas.
 
 </p>
 
@@ -1572,16 +1558,13 @@ de pósters y fotografías científicas.
 
 <!-- EVENTO 14 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento charla">
 Charlas
 </span>
 
@@ -1592,25 +1575,25 @@ Charlas de estudiantes
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 8:15 - 10:30
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Varios
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -1629,11 +1612,11 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Espacio de divulgación donde estudiantes presentan
-sus trabajos e investigaciones.
+Espacio para la presentación de trabajos
+y resultados de investigación realizados
+por estudiantes.
 
 </p>
 
@@ -1649,16 +1632,13 @@ sus trabajos e investigaciones.
 
 <!-- EVENTO 15 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento poster">
 Sesión de Poster
 </span>
 
@@ -1669,25 +1649,25 @@ Concurso de fotografía e ilustración científica - Feria de emprendimiento
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 10:30 - 12:30
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Varios
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -1706,11 +1686,11 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Exposición y evaluación de trabajos visuales científicos,
-acompañada de actividades de emprendimiento.
+Exposición de trabajos visuales científicos,
+fotografía e iniciativas relacionadas con
+la divulgación y el emprendimiento.
 
 </p>
 
@@ -1726,16 +1706,13 @@ acompañada de actividades de emprendimiento.
 
 <!-- EVENTO 16 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento descanso">
 Descanso
 </span>
 
@@ -1746,25 +1723,25 @@ Almuerzo
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 12:30 - 2:00
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 N/A
 </p>
 
@@ -1783,10 +1760,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Espacio de descanso y alimentación para los participantes.
+Espacio destinado al almuerzo y descanso
+de los asistentes.
 
 </p>
 
@@ -1802,45 +1779,42 @@ Espacio de descanso y alimentación para los participantes.
 
 <!-- EVENTO 17 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento magistral">
 Magistral 6 (40 min)
 </span>
 
 
 <h3>
-"De la flor al músculo: interacciones ecológicas y evolución del vuelo en los colibríes"
+De la flor al músculo: interacciones ecológicas y evolución del vuelo en los colibríes
 </h3>
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 2:00 - 2:40
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Juan Camilo Ríos-Orjuela
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -1859,11 +1833,11 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Conferencia sobre las interacciones ecológicas,
-evolución y adaptación del vuelo en colibríes.
+Conferencia sobre interacciones ecológicas,
+evolución y adaptaciones relacionadas con
+el vuelo de los colibríes.
 
 </p>
 
@@ -1879,16 +1853,13 @@ evolución y adaptación del vuelo en colibríes.
 
 <!-- EVENTO 18 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento ponencia">
 Ponencia 5
 </span>
 
@@ -1899,25 +1870,25 @@ Transformación del Paisaje: Efectos en la Riqueza y Diversidad de Mamíferos Me
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 2:50 - 3:10
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 William Bonell - WCS
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -1936,11 +1907,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Presentación sobre los efectos de los cambios del paisaje
-en comunidades de mamíferos.
+Presentación sobre los efectos de los cambios
+del paisaje en comunidades de mamíferos.
 
 </p>
 
@@ -1956,16 +1926,13 @@ en comunidades de mamíferos.
 
 <!-- EVENTO 19 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento ponencia">
 Ponencia 6
 </span>
 
@@ -1976,25 +1943,25 @@ Entre el páramo y las moléculas: un caso para el género ¿Phlegmariurus?
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 3:20 - 3:40
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Ricardo Aponte
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -2013,11 +1980,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Presentación sobre diversidad vegetal y aproximaciones
-moleculares aplicadas al estudio del género Phlegmariurus.
+Charla sobre diversidad vegetal, relaciones evolutivas
+y aproximaciones moleculares.
 
 </p>
 
@@ -2027,18 +1993,19 @@ moleculares aplicadas al estudio del género Phlegmariurus.
 
 </div>
 
+
+
+
+
 <!-- EVENTO 20 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento magistral">
 Magistral 7 (40 min)
 </span>
 
@@ -2049,25 +2016,25 @@ De las interacciones biológicas a la prevención del accidente ofídico: ecolog
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 3:50 - 4:30
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 Carlos Bravo - Universidad de los Andes
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -2086,13 +2053,10 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Conferencia sobre las relaciones entre serpientes,
-ecología, comportamiento y la importancia del conocimiento
-científico para comprender la interacción entre humanos
-y fauna silvestre.
+Conferencia sobre ecología, comportamiento
+y relaciones entre serpientes y humanos.
 
 </p>
 
@@ -2108,16 +2072,13 @@ y fauna silvestre.
 
 <!-- EVENTO 21 -->
 
-
-<div class="evento"
-
-data-dia="6">
+<div class="evento" data-dia="6">
 
 
 <div class="evento-visible">
 
 
-<span class="tipo-evento">
+<span class="tipo-evento inicio-cierre">
 Cierre
 </span>
 
@@ -2128,25 +2089,25 @@ Cierre del evento
 
 
 <p>
-<strong>📅 Día:</strong>
+<strong>Día:</strong>
 6 de Octubre
 </p>
 
 
 <p>
-<strong>🕘 Hora:</strong>
+<strong>Hora:</strong>
 4:40 - 5:00
 </p>
 
 
 <p>
-<strong>👤 Autor:</strong>
+<strong>Autor:</strong>
 N/A
 </p>
 
 
 <p>
-<strong>📍 Lugar:</strong>
+<strong>Lugar:</strong>
 Auditorio Fundadores
 </p>
 
@@ -2165,11 +2126,9 @@ Presencial
 
 
 <p>
-
 <strong>Descripción:</strong>
 
-Actividad de cierre del segundo día del simposio,
-agradecimientos finales y finalización de la programación.
+Cierre oficial de las actividades del simposio.
 
 </p>
 
@@ -2179,225 +2138,145 @@ agradecimientos finales y finalización de la programación.
 
 </div>
 
+<!-- =====================================
+     ESTILOS CRONOGRAMA
+===================================== -->
 
-</div>
-
-
-/* =====================================
-   COLORES POR TIPO DE EVENTO
-===================================== */
-
-
-.tipo-evento {
-
-
-    color:white;
-
-    border-radius:20px;
-
-    padding:7px 15px;
-
-    font-weight:700;
-
-}
-
-
-
-/* Magistrales */
-
-.tipo-evento.magistral {
-
-    background:#084b69;
-
-}
-
-
-
-/* Ponencias */
-
-.tipo-evento.ponencia {
-
-    background:#168aad;
-
-}
-
-
-
-/* Charlas */
-
-.tipo-evento.charla {
-
-    background:#52b7c9;
-
-    color:#073b4c;
-
-}
-
-
-
-/* Posters */
-
-.tipo-evento.poster {
-
-    background:#3aa6a0;
-
-}
-
-
-
-/* Descansos */
-
-.tipo-evento.descanso {
-
-    background:#7b9eaa;
-
-}
-
-
-
-/* Inicio y cierre */
-
-.tipo-evento.inicio-cierre {
-
-    background:#0d6992;
-
-}
 
 <style>
 
 
-/* =====================================
-   CRONOGRAMA
-===================================== */
+/* TITULO DE LOS DIAS */
+
+.dia-titulo {
+
+
+margin-top:45px;
+
+
+margin-bottom:25px;
+
+
+font-size:28px;
+
+
+color:var(--azul-oscuro);
+
+
+border-left:6px solid var(--azul);
+
+
+padding-left:15px;
+
+
+}
+
+
+
+
+
+/* FILTROS */
 
 
 .filtros-cronograma {
 
-    display:flex;
 
-    justify-content:center;
+display:flex;
 
-    align-items:center;
 
-    gap:15px;
+justify-content:center;
 
-    flex-wrap:wrap;
 
-    margin:35px auto;
+gap:20px;
+
+
+flex-wrap:wrap;
+
+
+margin-bottom:40px;
+
 
 }
 
 
 
 .filtros-cronograma select,
-.filtros-cronograma input {
-
-
-    padding:13px 18px;
-
-    border-radius:10px;
-
-    border:
-
-    1px solid var(--borde);
-
-    font-size:15px;
-
-    outline:none;
-
-    color:var(--texto);
-
-    background:white;
-
-}
-
 
 
 .filtros-cronograma input {
 
-    width:320px;
+
+padding:14px 18px;
+
+
+border-radius:12px;
+
+
+border:
+
+1px solid var(--borde);
+
+
+font-size:16px;
+
+
+outline:none;
+
+
+width:280px;
+
 
 }
 
 
 
-.filtros-cronograma select:focus,
-.filtros-cronograma input:focus {
+.filtros-cronograma input:focus,
 
-    border-color:
 
-    var(--azul-principal);
+.filtros-cronograma select:focus {
+
+
+border-color:var(--azul);
+
 
 }
 
 
 
-/* =====================================
-   TITULO DE CADA DÍA
-===================================== */
-
-
-.dia-titulo {
-
-    margin:
-
-    45px 0 25px;
-
-    color:
-
-    var(--azul-oscuro);
-
-    font-size:28px;
-
-    text-align:left;
-
-}
 
 
 
-/* =====================================
-   TARJETAS DE EVENTOS
-===================================== */
+/* TARJETAS DE EVENTOS */
 
 
 .evento {
 
 
-    background:white;
+background:white;
 
 
-    border:
-
-    1px solid var(--borde);
+border-radius:18px;
 
 
-    border-left:
-
-    6px solid var(--azul-principal);
+margin-bottom:25px;
 
 
-    border-radius:16px;
+border-left:8px solid var(--azul);
 
 
-    margin-bottom:22px;
+box-shadow:
+
+0 8px 25px rgba(13,105,146,.12);
 
 
-    overflow:hidden;
+overflow:hidden;
 
 
-    cursor:pointer;
+cursor:pointer;
 
 
-    box-shadow:
+transition:.3s;
 
-    0 8px 25px rgba(13,105,146,.10);
-
-
-    transition:
-
-    transform .25s ease,
-
-    box-shadow .25s ease;
 
 }
 
@@ -2406,98 +2285,82 @@ agradecimientos finales y finalización de la programación.
 .evento:hover {
 
 
-    transform:
-
-    translateY(-4px);
-
-
-    box-shadow:
-
-    0 14px 35px rgba(13,105,146,.18);
+transform:translateY(-3px);
 
 
 }
 
 
 
-/* =====================================
-   INFORMACIÓN VISIBLE
-===================================== */
 
 
 .evento-visible {
 
 
-    padding:25px;
+padding:30px;
+
 
 }
 
+
+
+.evento-visible h3 {
+
+
+font-size:22px;
+
+
+margin:18px 0;
+
+
+color:var(--azul-oscuro);
+
+
+line-height:1.4;
+
+
+}
+
+
+
+.evento-visible p {
+
+
+margin:8px 0;
+
+
+line-height:1.5;
+
+
+}
+
+
+
+
+
+
+/* TIPOS DE EVENTO */
 
 
 .tipo-evento {
 
 
-    display:inline-block;
+display:inline-block;
 
 
-    background:
-
-    var(--azul-claro);
+padding:8px 18px;
 
 
-    color:
-
-    var(--azul-oscuro);
+border-radius:20px;
 
 
-    font-weight:700;
+color:white;
 
 
-    padding:
-
-    6px 14px;
+font-weight:700;
 
 
-    border-radius:20px;
-
-
-    font-size:13px;
-
-
-    margin-bottom:12px;
-
-
-}
-
-
-
-.evento h3 {
-
-
-    color:
-
-    var(--azul-oscuro);
-
-
-    font-size:22px;
-
-
-    margin-bottom:18px;
-
-
-}
-
-
-
-.evento p {
-
-
-    margin:
-
-    7px 0;
-
-
-    font-size:15px;
+font-size:14px;
 
 
 }
@@ -2505,40 +2368,106 @@ agradecimientos finales y finalización de la programación.
 
 
 
-/* =====================================
-   INFORMACIÓN OCULTA
-===================================== */
+.tipo-evento.magistral {
+
+
+background:#084b69;
+
+
+}
+
+
+
+.tipo-evento.ponencia {
+
+
+background:#168aad;
+
+
+}
+
+
+
+.tipo-evento.charla {
+
+
+background:#52b7c9;
+
+
+color:#083344;
+
+
+}
+
+
+
+.tipo-evento.poster {
+
+
+background:#3aa6a0;
+
+
+}
+
+
+
+.tipo-evento.descanso {
+
+
+background:#7895a3;
+
+
+}
+
+
+
+.tipo-evento.inicio-cierre {
+
+
+background:#0d6992;
+
+
+}
+
+
+
+.tipo-evento.remota {
+
+
+background:#5e548e;
+
+
+}
+
+
+
+
+
+
+/* DETALLE DESPLEGABLE */
 
 
 .evento-detalle {
 
 
-    max-height:0;
+max-height:0;
 
 
-    overflow:hidden;
+overflow:hidden;
 
 
-    background:
-
-    var(--azul-suave);
+padding:0 30px;
 
 
-    padding:
-
-    0 25px;
+background:var(--azul-claro);
 
 
-    opacity:0;
+transition:
 
+max-height .4s ease,
 
-    transition:
+padding .4s ease;
 
-    max-height .4s ease,
-
-    opacity .3s ease,
-
-    padding .4s ease;
 
 }
 
@@ -2547,161 +2476,315 @@ agradecimientos finales y finalización de la programación.
 .evento.activo .evento-detalle {
 
 
-    max-height:300px;
+max-height:300px;
 
 
-    padding:
-
-    25px;
-
-
-    opacity:1;
+padding:25px 30px;
 
 
 }
 
 
 
-/* =====================================
-   MENSAJE SIN RESULTADOS
-===================================== */
+.evento-detalle p {
 
 
-.sin-resultados {
+margin-bottom:12px;
 
 
-    display:none;
-
-
-    text-align:center;
-
-
-    padding:30px;
-
-
-    color:
-
-    var(--azul-oscuro);
-
-
-    font-weight:600;
+line-height:1.6;
 
 
 }
 
 
 
-/* =====================================
-   MÓVIL
-===================================== */
+
+
+
+
+/* BORDES DE COLOR SEGÚN TIPO */
+
+
+.evento:has(.magistral){
+
+
+border-left-color:#084b69;
+
+
+}
+
+
+
+.evento:has(.ponencia){
+
+
+border-left-color:#168aad;
+
+
+}
+
+
+
+.evento:has(.charla){
+
+
+border-left-color:#52b7c9;
+
+
+}
+
+
+
+.evento:has(.poster){
+
+
+border-left-color:#3aa6a0;
+
+
+}
+
+
+
+.evento:has(.descanso){
+
+
+border-left-color:#7895a3;
+
+
+}
+
+
+
+.evento:has(.inicio-cierre){
+
+
+border-left-color:#0d6992;
+
+
+}
+
+
+
+.evento:has(.remota){
+
+
+border-left-color:#5e548e;
+
+
+}
+
+
+
 
 
 @media(max-width:700px){
 
 
-.filtros-cronograma input {
-
-    width:100%;
-
-}
+.evento-visible {
 
 
-.evento h3 {
-
-    font-size:18px;
-
-}
-
-
-.dia-titulo {
-
-    font-size:23px;
-
-}
+padding:20px;
 
 
 }
 
 
 
+.evento-visible h3 {
+
+
+font-size:18px;
+
+
+}
+
+
+
+.filtros-cronograma input,
+
+
+.filtros-cronograma select {
+
+
+width:100%;
+
+
+}
+
+
+
+}
+
+/* =====================================
+   POSTERS
+===================================== */
+
+
+.boton-centro {
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+}
+
+
+
+.boton-canva {
+
+
+background:var(--azul);
+
+
+color:white;
+
+
+padding:15px 35px;
+
+
+border-radius:30px;
+
+
+text-decoration:none;
+
+
+font-weight:700;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.boton-canva:hover {
+
+
+background:var(--azul-oscuro);
+
+
+transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+/* =====================================
+   ORGANIZADORES
+===================================== */
+
+
+.logos-organizadores {
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(150px,1fr));
+
+
+gap:35px;
+
+
+align-items:center;
+
+
+margin-top:35px;
+
+
+}
+
+
+
+.logos-organizadores img {
+
+
+width:100%;
+
+
+max-height:130px;
+
+
+object-fit:contain;
+
+
+padding:15px;
+
+
+background:white;
+
+
+border-radius:15px;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.logos-organizadores img:hover {
+
+
+transform:scale(1.05);
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+.logos-organizadores {
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+}
+   
 </style>
+
+
 
 
 
 <script>
 
 
-// =====================================
 // ABRIR Y CERRAR EVENTOS
-// =====================================
 
 
 document.querySelectorAll(".evento")
-.forEach(evento => {
+.forEach(evento=>{
 
 
-    evento.addEventListener("click",()=>{
-
-        evento.classList.toggle("activo");
-
-    });
+evento.addEventListener("click",()=>{
 
 
-    let tipo = evento
-    .querySelector(".tipo-evento")
-    .innerText
-    .toLowerCase();
+evento.classList.toggle("activo");
 
 
-
-    let etiqueta =
-    evento.querySelector(".tipo-evento");
-
-
-
-    if(tipo.includes("magistral")){
-
-        etiqueta.classList.add("magistral");
-
-    }
-
-
-    else if(tipo.includes("ponencia")){
-
-        etiqueta.classList.add("ponencia");
-
-    }
-
-
-    else if(tipo.includes("poster")){
-
-        etiqueta.classList.add("poster");
-
-    }
-
-
-    else if(tipo.includes("charla")){
-
-        etiqueta.classList.add("charla");
-
-    }
-
-
-    else if(tipo.includes("descanso")){
-
-        etiqueta.classList.add("descanso");
-
-    }
-
-
-    else if(
-    tipo.includes("inicio") ||
-    tipo.includes("cierre")
-    ){
-
-        etiqueta.classList.add("inicio-cierre");
-
-    }
+});
 
 
 });
@@ -2709,38 +2792,31 @@ document.querySelectorAll(".evento")
 
 
 
-// =====================================
-// FILTRO POR DÍA
-// =====================================
+
+// FILTRO POR DIA
 
 
-const filtroDia =
-document.getElementById("filtro-dia");
+const filtroDia = document.getElementById("filtro-dia");
 
 
-const buscador =
-document.getElementById("buscar-actividad");
+const buscador = document.getElementById("buscar-actividad");
 
 
 
 function filtrarEventos(){
 
 
-let diaSeleccionado =
-filtroDia.value;
+
+let dia = filtroDia.value.toLowerCase();
 
 
-let texto =
-buscador.value.toLowerCase();
+let texto = buscador.value.toLowerCase();
+
 
 
 
 document.querySelectorAll(".evento")
 .forEach(evento=>{
-
-
-let dia =
-evento.dataset.dia;
 
 
 
@@ -2749,10 +2825,11 @@ evento.innerText.toLowerCase();
 
 
 
-let coincideDia =
-(diaSeleccionado==="todos"
-||
-dia===diaSeleccionado);
+let perteneceDia =
+dia==="todos" ||
+
+evento.dataset.dia===dia;
+
 
 
 
@@ -2761,13 +2838,16 @@ contenido.includes(texto);
 
 
 
-if(coincideDia && coincideTexto){
+
+if(perteneceDia && coincideTexto){
 
 
 evento.style.display="block";
 
 
-}else{
+}
+
+else{
 
 
 evento.style.display="none";
@@ -2776,11 +2856,12 @@ evento.style.display="none";
 }
 
 
+
 });
 
 
-}
 
+}
 
 
 
@@ -2817,15 +2898,23 @@ Plantilla de Posters
 
 
 
-<div class="bloque-especial">
+<div class="tarjeta poster-card">
 
 
-<p>
+<p class="texto-centro">
 
 La plantilla oficial para la elaboración de posters
 del evento se encuentra disponible en Canva.
 
 </p>
+
+
+
+<br>
+
+
+
+<div class="boton-centro">
 
 
 <a 
@@ -2838,9 +2927,12 @@ class="boton-canva"
 
 >
 
-Abrir plantilla de posters
+Ver plantilla de poster
 
 </a>
+
+
+</div>
 
 
 </div>
@@ -2869,61 +2961,54 @@ Organizadores
 
 
 
+<div class="tarjeta">
+
+
 <p class="texto-centro">
 
 Este evento cuenta con la participación de diferentes
-grupos de investigación, semilleros e instituciones
-que hacen posible su desarrollo.
+grupos, semilleros e instituciones dedicadas a la
+investigación y divulgación científica.
 
 </p>
 
 
 
-<div class="contenedor-logos">
+<br>
 
 
-<div class="logo-card">
+
+<div class="logos-organizadores">
+
+
+
 <img src="organizador1.png" alt="Organizador 1">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador2.png" alt="Organizador 2">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador3.png" alt="Organizador 3">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador4.png" alt="Organizador 4">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador5.png" alt="Organizador 5">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador6.png" alt="Organizador 6">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador7.png" alt="Organizador 7">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador8.png" alt="Organizador 8">
-</div>
 
 
-<div class="logo-card">
 <img src="organizador9.png" alt="Organizador 9">
+
+
 </div>
 
 
@@ -2932,233 +3017,7 @@ que hacen posible su desarrollo.
 
 </section>
 
-
-
-
-
-<!-- =====================================
-     ESTILOS DE POSTERS Y ORGANIZADORES
-===================================== -->
-
-
-<style>
-
-
-.bloque-especial {
-
-
-background:white;
-
-
-border:1px solid var(--borde);
-
-
-border-radius:20px;
-
-
-padding:40px;
-
-
-text-align:center;
-
-
-box-shadow:
-
-0 10px 30px rgba(13,105,146,.12);
-
-
-max-width:850px;
-
-
-margin:auto;
-
-
-font-size:18px;
-
-
-}
-
-
-
-
-.boton-canva {
-
-
-display:inline-block;
-
-
-margin-top:30px;
-
-
-background:var(--azul-principal);
-
-
-color:white;
-
-
-text-decoration:none;
-
-
-padding:14px 30px;
-
-
-border-radius:12px;
-
-
-font-weight:700;
-
-
-transition:.3s;
-
-
-}
-
-
-
-.boton-canva:hover {
-
-
-background:var(--azul-oscuro);
-
-
-transform:translateY(-3px);
-
-
-}
-
-
-
-
-.contenedor-logos {
-
-
-margin-top:45px;
-
-
-display:grid;
-
-
-grid-template-columns:
-
-repeat(3,1fr);
-
-
-gap:30px;
-
-
-}
-
-
-
-
-.logo-card {
-
-
-height:180px;
-
-
-background:white;
-
-
-border:
-
-1px solid var(--borde);
-
-
-border-radius:18px;
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-padding:25px;
-
-
-box-shadow:
-
-0 8px 25px rgba(13,105,146,.10);
-
-
-transition:.3s;
-
-
-}
-
-
-
-.logo-card:hover {
-
-
-transform:translateY(-5px);
-
-
-box-shadow:
-
-0 15px 35px rgba(13,105,146,.18);
-
-
-}
-
-
-
-.logo-card img {
-
-
-max-width:100%;
-
-
-max-height:120px;
-
-
-object-fit:contain;
-
-
-}
-
-
-
-
-@media(max-width:800px){
-
-
-.contenedor-logos {
-
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-
-}
-
-
-}
-
-
-
-@media(max-width:500px){
-
-
-.contenedor-logos {
-
-
-grid-template-columns:
-
-1fr;
-
-
-}
-
-
-}
-
-</style>
+</section>
 
 <!-- =====================================
      SECCIÓN ASISTENCIA
@@ -3169,7 +3028,7 @@ grid-template-columns:
 
 
 <h2 class="titulo-seccion">
-Registro de Asistencia
+Asistencia
 </h2>
 
 
@@ -3177,36 +3036,41 @@ Registro de Asistencia
 
 
 
-<div class="asistencia-card">
-
-
-<div class="qr-box">
-
-
-<div class="qr-icono">
-▣
-</div>
+<div class="tarjeta asistencia-card">
 
 
 <h3>
-Código QR de asistencia
+Registro de asistencia
 </h3>
 
 
-<p>
 
-El código QR estará disponible durante el evento
-para realizar el registro de asistencia.
+<p class="texto-centro">
+
+Durante el desarrollo del evento estará disponible
+el código QR para realizar el registro de asistencia.
 
 </p>
 
 
-<!--
-Cuando tengas el QR reemplaza este bloque por:
 
-<img src="qr.png" alt="Código QR de asistencia">
+<div class="qr-container">
 
--->
+
+<div class="qr-placeholder">
+
+
+<span>
+QR
+</span>
+
+
+<p>
+Código disponible durante el evento
+</p>
+
+
+</div>
 
 
 </div>
@@ -3216,6 +3080,8 @@ Cuando tengas el QR reemplaza este bloque por:
 
 
 </section>
+
+
 
 
 
@@ -3238,7 +3104,9 @@ Contacto
 
 
 
-<div class="contacto-card">
+
+<div class="tarjeta contacto-card">
+
 
 
 <h3>
@@ -3249,7 +3117,7 @@ Información del evento
 
 <p>
 
-Para información adicional sobre el simposio,
+Para mayor información sobre el simposio,
 comunicarse con el equipo organizador.
 
 </p>
@@ -3262,23 +3130,24 @@ comunicarse con el equipo organizador.
 
 <p>
 
-
 <strong>
-Correo:
+Correo electrónico:
 </strong>
-
-
-<a href="mailto:correo@evento.com">
-
-simposioibd@udistrital.edu.co
-
-</a>
-
 
 </p>
 
 
+
+<a href="mailto:correo@evento.com">
+
+correo@evento.com
+
+</a>
+
+
+
 </div>
+
 
 
 </section>
@@ -3287,8 +3156,10 @@ simposioibd@udistrital.edu.co
 
 
 
+
+
 <!-- =====================================
-     PIE DE PÁGINA
+     FOOTER
 ===================================== -->
 
 
@@ -3300,9 +3171,8 @@ III Simposio de Interacciones Biológicas y Diversidad
 </h3>
 
 
-
 <p>
-Evento académico de divulgación científica
+Evento académico y científico
 </p>
 
 
@@ -3312,7 +3182,10 @@ Evento académico de divulgación científica
 </p>
 
 
+
 </footer>
+
+
 
 
 
@@ -3326,6 +3199,7 @@ Evento académico de divulgación científica
 <style>
 
 
+
 /* ===============================
    ASISTENCIA
 ================================ */
@@ -3334,26 +3208,36 @@ Evento académico de divulgación científica
 .asistencia-card {
 
 
-display:flex;
-
-
-justify-content:center;
+text-align:center;
 
 
 }
 
 
 
-.qr-box {
+.qr-container {
 
 
-width:330px;
+display:flex;
 
 
-height:330px;
+justify-content:center;
 
 
-background:white;
+margin-top:35px;
+
+
+}
+
+
+
+.qr-placeholder {
+
+
+width:280px;
+
+
+height:280px;
 
 
 border-radius:25px;
@@ -3361,7 +3245,7 @@ border-radius:25px;
 
 border:
 
-2px dashed var(--azul-principal);
+3px dashed var(--azul);
 
 
 display:flex;
@@ -3376,61 +3260,43 @@ justify-content:center;
 align-items:center;
 
 
-text-align:center;
+background:
 
-
-padding:35px;
-
-
-box-shadow:
-
-0 10px 30px rgba(13,105,146,.12);
+var(--azul-claro);
 
 
 }
 
 
 
-.qr-icono {
+.qr-placeholder span {
 
 
 font-size:70px;
 
 
-color:
-
-var(--azul-principal);
+font-weight:800;
 
 
-margin-bottom:20px;
+color:var(--azul);
 
 
 }
 
 
 
-.qr-box h3 {
+.qr-placeholder p {
 
 
-color:
-
-var(--azul-oscuro);
+margin-top:15px;
 
 
-font-size:25px;
-
-
-}
-
-
-
-.qr-box p {
-
-
-line-height:1.6;
+color:var(--azul-oscuro);
 
 
 }
+
+
 
 
 
@@ -3450,26 +3316,7 @@ max-width:700px;
 margin:auto;
 
 
-background:white;
-
-
-border-radius:20px;
-
-
-padding:40px;
-
-
 text-align:center;
-
-
-border:
-
-1px solid var(--borde);
-
-
-box-shadow:
-
-0 10px 30px rgba(13,105,146,.12);
 
 
 }
@@ -3479,12 +3326,10 @@ box-shadow:
 .contacto-card h3 {
 
 
-color:
-
-var(--azul-oscuro);
+font-size:26px;
 
 
-font-size:25px;
+color:var(--azul-oscuro);
 
 
 margin-bottom:20px;
@@ -3494,22 +3339,13 @@ margin-bottom:20px;
 
 
 
-.contacto-card p {
-
-
-line-height:1.7;
-
-
-}
-
-
-
 .contacto-card a {
 
 
-color:
+font-size:18px;
 
-var(--azul-principal);
+
+color:var(--azul);
 
 
 font-weight:bold;
@@ -3534,6 +3370,8 @@ text-decoration:underline;
 
 
 
+
+
 /* ===============================
    FOOTER
 ================================ */
@@ -3545,18 +3383,16 @@ footer {
 margin-top:60px;
 
 
-background:
-
-var(--azul-oscuro);
+background:var(--azul-oscuro);
 
 
 color:white;
 
 
+padding:40px 20px;
+
+
 text-align:center;
-
-
-padding:35px 20px;
 
 
 }
@@ -3566,10 +3402,10 @@ padding:35px 20px;
 footer h3 {
 
 
-margin-bottom:15px;
-
-
 font-size:22px;
+
+
+margin-bottom:15px;
 
 
 }
@@ -3587,31 +3423,20 @@ margin:8px;
 
 
 
-/* ===============================
-   RESPONSIVE
-================================ */
-
-
-@media(max-width:600px){
-
-
-.qr-box {
-
-
-width:280px;
-
-
-height:280px;
-
-
-}
 
 
 
-.contacto-card {
+@media(max-width:700px){
 
 
-padding:25px;
+
+.qr-placeholder {
+
+
+width:220px;
+
+
+height:220px;
 
 
 }
@@ -3619,6 +3444,7 @@ padding:25px;
 
 
 }
+
 
 </style>
 
@@ -3628,4 +3454,4 @@ padding:25px;
 
 </body>
 
-</html> 
+</html>
