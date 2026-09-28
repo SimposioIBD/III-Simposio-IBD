@@ -1,1269 +1,680 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>III Simposio de Interacciones Biológicas y Diversidad</title>
-
-<style>
-
-/* =====================================================
-   COLORES
-   ===================================================== */
-
-:root {
-
-    --verde: #17634f;
-    --verde-oscuro: #104b3d;
-    --verde-claro: #eaf3ef;
-
-    --azul: #17657a;
-    --azul-claro: #eaf4f7;
-
-    --gris: #34454c;
-    --gris-claro: #6b777b;
-
-    --borde: #dce7e3;
-
-}
-
-
-/* =====================================================
-   CONFIGURACIÓN GENERAL
-   ===================================================== */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    margin: 0;
-
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    background: white;
-
-    color: var(--gris);
-
-    line-height: 1.6;
-
-}
-
-
-/* =====================================================
-   BARRA DE NAVEGACIÓN
-   ===================================================== */
-
-nav {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 35px;
-
-    padding: 17px 20px;
-
-    background: rgba(255,255,255,0.97);
-
-    border-bottom: 1px solid var(--borde);
-
-    box-shadow:
-        0 3px 12px rgba(0,0,0,0.07);
-
-}
-
-nav a {
-
-    text-decoration: none;
-
-    color: var(--verde);
-
-    font-weight: 700;
-
-    font-size: 15px;
-
-    transition: 0.25s;
-
-}
-
-nav a:hover {
-
-    color: var(--azul);
-
-}
-
-
-/* =====================================================
-   ENCABEZADO Y LOGO
-   ===================================================== */
-
-header {
-
-    width: 100%;
-
-    text-align: center;
-
-    padding: 35px 20px 30px;
-
-    background: white;
-
-    border-bottom: 5px solid var(--verde);
-
-}
-
-.logo {
-
-    display: block;
-
-    width: 750px;
-
-    max-width: 95%;
-
-    height: auto;
-
-    margin: 0 auto;
-
-}
-
-
-/* =====================================================
-   CONTENEDOR
-   ===================================================== */
-
-.container {
-
-    width: 90%;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-}
-
-section {
-
-    padding: 55px 0;
-
-}
-
-.titulo {
-
-    margin: 0 0 35px;
-
-    text-align: center;
-
-    color: var(--verde);
-
-    font-size: 34px;
-
-    font-weight: 750;
-
-}
-
-
-/* =====================================================
-   TARJETAS
-   ===================================================== */
-
-.card {
-
-    background: white;
-
-    border: 1px solid #edf1ef;
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    margin-bottom: 25px;
-
-    box-shadow:
-        0 6px 22px rgba(0,0,0,0.08);
-
-}
-
-
-/* =====================================================
-   BOTONES
-   ===================================================== */
-
-.boton {
-
-    display: inline-block;
-
-    padding: 13px 24px;
-
-    background: var(--verde);
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 10px;
-
-    font-weight: 700;
-
-    transition: 0.25s;
-
-}
-
-.boton:hover {
-
-    background: var(--azul);
-
-    transform: translateY(-2px);
-
-}
-
-
-/* =====================================================
-   PIE DE PÁGINA
-   ===================================================== */
-
-footer {
-
-    margin-top: 30px;
-
-    padding: 30px 20px;
-
-    background: var(--verde-oscuro);
-
-    color: white;
-
-    text-align: center;
-
-}
-
-
-/* =====================================================
-   CELULARES
-   ===================================================== */
-
-@media (max-width: 700px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>III Simposio de Interacciones Biológicas y Diversidad</title>
+
+  <style>
+    /* =========================
+       DISEÑO GENERAL
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #24483f;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       BARRA DE NAVEGACIÓN
+    ========================= */
 
     nav {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #dce7e3;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        gap: 15px;
-
-        padding: 14px 10px;
-
-        flex-wrap: wrap;
-
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 15px;
     }
 
     nav a {
+      display: block;
+      color: #17634f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
 
+    nav a:hover {
+      background: #e8f4ef;
+      color: #087da0;
+    }
+
+    /* =========================
+       BANNER PRINCIPAL
+       CORREGIDO A ANCHO COMPLETO
+    ========================= */
+
+    .banner {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .banner img {
+      display: block;
+
+      /* Ocupa todo el ancho de la pantalla */
+      width: 100%;
+      max-width: none;
+      height: auto;
+
+      /* Evita márgenes y espacios laterales */
+      margin: 0;
+      padding: 0;
+
+      /* Mantiene las proporciones del banner */
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* =========================
+       CONTENIDO PRINCIPAL
+    ========================= */
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 35px 25px;
+    }
+
+    section {
+      padding: 35px 0;
+      scroll-margin-top: 75px;
+    }
+
+    h1, h2, h3 {
+      color: #17634f;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       BOTONES
+    ========================= */
+
+    .boton {
+      display: inline-block;
+      background: #17634f;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 5px;
+      transition: background 0.3s;
+    }
+
+    .boton:hover {
+      background: #087da0;
+    }
+
+    /* =========================
+       PIE DE PÁGINA
+    ========================= */
+
+    footer {
+      width: 100%;
+      background: #17634f;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* =========================
+       ADAPTACIÓN A CELULARES
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      nav ul {
+        gap: 4px;
+        padding: 8px;
+      }
+
+      nav a {
         font-size: 14px;
+        padding: 7px 9px;
+      }
 
-    }
-
-    header {
-
-        padding: 25px 10px;
-
-    }
-
-    .logo {
-
+      .banner {
         width: 100%;
+      }
 
+      .banner img {
+        width: 100%;
+        height: auto;
+      }
+
+      .container {
+        padding: 20px 16px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      section {
+        padding: 25px 0;
+      }
     }
 
-    .titulo {
-
-        font-size: 28px;
-
-    }
-
-    .card {
-
-        padding: 22px;
-
-    }
-
-}
-
-</style>
-
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================
+       MENÚ PRINCIPAL
+  ========================= -->
 
-<!-- =====================================================
-     NAVEGACIÓN
-     ===================================================== -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#cronograma">Cronograma</a></li>
+      <li><a href="#posters">Posters</a></li>
+      <li><a href="#asistencia">Asistencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-<nav>
+  <!-- =========================
+       BANNER DEL SIMPOSIO
+  ========================= -->
 
-    <a href="#inicio">Inicio</a>
-
-    <a href="#cronograma">Cronograma</a>
-
-    <a href="#posters">Posters</a>
-
-    <a href="#asistencia">Asistencia</a>
-
-    <a href="#contacto">Contacto</a>
-
-</nav>
-
-
-<!-- =====================================================
-     LOGO
-     ===================================================== -->
-
-<header>
-
+  <header class="banner">
     <img
-        src="logo.png"
-        alt="Logo del III Simposio de Interacciones Biológicas y Diversidad"
-        class="logo"
+      src="logo.png"
+      alt="Banner del III Simposio de Interacciones Biológicas y Diversidad"
     >
-
-</header>
-
-
-<!-- =====================================================
-     CONTENIDO PRINCIPAL
-     ===================================================== -->
-
-<div class="container">
-
-
-<!-- =====================================================
-     INICIO
-     ===================================================== -->
-
-<section id="inicio">
-
-    <h2 class="titulo">
-        Bienvenidos
-    </h2>
-
-    <div class="card">
-
-        <p>
-            El III Simposio de Interacciones Biológicas y
-            Diversidad es un espacio académico para la
-            divulgación científica, el intercambio de conocimientos
-            y la presentación de investigaciones relacionadas con
-            la biodiversidad y las interacciones biológicas.
-        </p>
-
-        <p>
-            En este espacio participan estudiantes, investigadores
-            y profesionales interesados en compartir conocimientos,
-            experiencias y resultados de investigación.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- =====================================================
-     CRONOGRAMA
-     ===================================================== -->
-
-<style>
-
-/* =====================================================
-   FILTROS
-   ===================================================== */
-
-.filtros {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-
-    margin-bottom: 30px;
-
-}
-
-
-.filtros select,
-.filtros input {
-
-    flex: 1;
-
-    min-width: 180px;
-
-    padding: 13px 15px;
-
-    border: 1px solid #d5dfdc;
-
-    border-radius: 10px;
-
-    background: white;
-
-    color: #34454c;
-
-    font-size: 15px;
-
-    outline: none;
-
-}
-
-
-.filtros select:focus,
-.filtros input:focus {
-
-    border-color: #17634f;
-
-    box-shadow:
-        0 0 0 3px rgba(23,99,79,0.10);
-
-}
-
-
-/* =====================================================
-   TARJETAS DE ACTIVIDADES
-   ===================================================== */
-
-.evento {
-
-    margin-bottom: 22px;
-
-}
-
-
-.resumen-evento {
-
-    position: relative;
-
-    cursor: pointer;
-
-    margin-bottom: 0;
-
-    border: 1px solid #e3ebe8;
-
-    transition:
-        transform 0.25s,
-        box-shadow 0.25s,
-        border-color 0.25s;
-
-}
-
-
-.resumen-evento:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 9px 25px rgba(0,0,0,0.10);
-
-    border-color: #bcd5cd;
-
-}
-
-
-/* =====================================================
-   TIPO DE ACTIVIDAD
-   ===================================================== */
-
-.tipo-evento {
-
-    display: inline-block;
-
-    padding: 7px 14px;
-
-    margin-bottom: 12px;
-
-    border-radius: 30px;
-
-    background: var(--verde);
-
-    color: white;
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.5px;
-
-    text-transform: uppercase;
-
-}
-
-
-/* =====================================================
-   TÍTULO DE LA ACTIVIDAD
-   ===================================================== */
-
-.titulo-evento {
-
-    margin: 5px 0 18px;
-
-    padding-right: 45px;
-
-    color: var(--gris);
-
-    font-size: 23px;
-
-    line-height: 1.35;
-
-}
-
-
-/* =====================================================
-   INFORMACIÓN QUE SE VE SIN ABRIR
-   ===================================================== */
-
-.info-resumen {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 15px;
-
-    margin-top: 15px;
-
-}
-
-
-.info-item {
-
-    padding: 12px;
-
-    background: #f7faf9;
-
-    border-radius: 10px;
-
-}
-
-
-.info-item strong {
-
-    display: block;
-
-    color: var(--verde);
-
-    font-size: 12px;
-
-    margin-bottom: 3px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.3px;
-
-}
-
-
-.info-item span {
-
-    font-size: 15px;
-
-}
-
-
-/* =====================================================
-   SIGNO +
-   ===================================================== */
-
-.indicador {
-
-    position: absolute;
-
-    right: 25px;
-
-    top: 25px;
-
-    width: 32px;
-
-    height: 32px;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: var(--verde-claro);
-
-    color: var(--verde);
-
-    font-size: 20px;
-
-    font-weight: bold;
-
-    transition: transform 0.3s;
-
-}
-
-
-.evento.activo .indicador {
-
-    transform: rotate(45deg);
-
-}
-
-
-/* =====================================================
-   INFORMACIÓN COMPLETA
-   ===================================================== */
-
-.detalle-evento {
-
-    display: none;
-
-    margin-top: 25px;
-
-    padding: 28px 30px;
-
-    background: var(--verde-claro);
-
-    border-radius: 15px;
-
-    border-left: 5px solid var(--verde);
-
-}
-
-
-.evento.activo .detalle-evento {
-
-    display: block;
-
-}
-
-
-.detalle-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 18px;
-
-    margin-bottom: 20px;
-
-}
-
-
-.detalle-item {
-
-    background: white;
-
-    padding: 16px;
-
-    border-radius: 10px;
-
-}
-
-
-.detalle-item strong {
-
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: var(--verde);
-
-}
-
-
-.descripcion {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-}
-
-
-.descripcion strong {
-
-    color: var(--verde);
-
-}
-
-
-/* =====================================================
-   CELULARES
-   ===================================================== */
-
-@media(max-width: 700px) {
-
-    .info-resumen {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .detalle-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .titulo-evento {
-
+  </header>
+
+  <!-- =========================
+       CONTENIDO DE LA PÁGINA
+  ========================= -->
+
+  <div class="container">
+
+    <!-- INICIO -->
+
+    <section id="inicio">
+
+      <h2>Bienvenidos al III Simposio</h2>
+
+      <p>
+        Te damos la bienvenida al III Simposio de Interacciones
+        Biológicas y Diversidad.
+      </p>
+
+      <p>
+        Un espacio para compartir conocimientos, investigaciones
+        y experiencias en torno a la diversidad biológica y las
+        interacciones entre los organismos.
+      </p>
+
+    </section>
+
+       <!-- =========================
+         ESTILOS DEL CRONOGRAMA
+    ========================= -->
+
+    <style>
+      .filtros {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 25px 0;
+      }
+
+      .filtros select,
+      .filtros input {
+        padding: 12px;
+        border: 1px solid #b8d4ca;
+        border-radius: 8px;
+        font-size: 15px;
+        min-width: 200px;
+        background: #ffffff;
+        color: #24483f;
+      }
+
+      .actividad {
+        background: #f4faf7;
+        border-left: 5px solid #17634f;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 18px 0;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .actividad:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+      }
+
+      .actividad h3 {
         font-size: 20px;
-
-    }
-
-
-    .indicador {
-
-        right: 18px;
-
-        top: 18px;
-
-    }
-
-}
-
-</style>
-
-
-<section id="cronograma">
-
-
-    <h2 class="titulo">
-        Cronograma del evento
-    </h2>
-
-
-    <div class="card">
-
-
-        <p>
-            Consulta las actividades del simposio y haz clic
-            sobre cada una para conocer toda la información.
-        </p>
-
-
-        <!-- =============================================
-             FILTROS
-             ============================================= -->
-
-        <div class="filtros">
-
-
-            <select id="filtroDia">
-
-                <option value="todos">
-                    Todas las fechas
-                </option>
-
-                <option value="5">
-                    5 de octubre
-                </option>
-
-                <option value="6">
-                    6 de octubre
-                </option>
-
-            </select>
-
-
-            <select id="filtroTipo">
-
-                <option value="todos">
-                    Todos los tipos
-                </option>
-
-                <option value="Conferencia magistral">
-                    Conferencia magistral
-                </option>
-
-                <option value="Conferencia">
-                    Conferencia
-                </option>
-
-                <option value="Ponencia">
-                    Ponencia
-                </option>
-
-                <option value="Taller">
-                    Taller
-                </option>
-
-                <option value="Póster">
-                    Póster
-                </option>
-
-                <option value="Charla estudiantil">
-                    Charla estudiantil
-                </option>
-
-            </select>
-
-
-            <input
-                type="text"
-                id="busqueda"
-                placeholder="Buscar actividad o ponente..."
-            >
-
-
-        </div>
-
-
-    </div>
-
-
-    <!-- =============================================
-         LISTA DE ACTIVIDADES
-         ============================================= -->
-
-    <div id="listaEventos">
-
-
-        <!-- =============================================
-             ACTIVIDAD DE EJEMPLO
-             ============================================= -->
-
-        <div
-            class="evento"
-            data-dia="5"
-            data-tipo="Conferencia magistral"
-        >
-
-
-            <div class="card resumen-evento">
-
-
-                <span class="tipo-evento">
-                    Conferencia magistral
-                </span>
-
-
-                <h3 class="titulo-evento">
-
-                    Biodiversidad e interacciones ecológicas
-                    en ecosistemas tropicales
-
-                </h3>
-
-
-                <!-- INFORMACIÓN VISIBLE -->
-
-                <div class="info-resumen">
-
-
-                    <div class="info-item">
-
-                        <strong>
-                            Ponente
-                        </strong>
-
-                        <span>
-                            Dra. María Ejemplo
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-item">
-
-                        <strong>
-                            Fecha
-                        </strong>
-
-                        <span>
-                            5 de octubre de 2026
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-item">
-
-                        <strong>
-                            Hora
-                        </strong>
-
-                        <span>
-                            9:00 a.m. - 10:00 a.m.
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-                <!-- SIGNO PARA ABRIR -->
-
-                <div class="indicador">
-                    +
-                </div>
-
-
-                <!-- =====================================
-                     INFORMACIÓN COMPLETA
-                     ===================================== -->
-
-                <div class="detalle-evento">
-
-
-                    <div class="detalle-grid">
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Tipo de actividad
-                            </strong>
-
-                            Conferencia magistral
-
-                        </div>
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Título
-                            </strong>
-
-                            Biodiversidad e interacciones
-                            ecológicas en ecosistemas tropicales
-
-                        </div>
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Ponente
-                            </strong>
-
-                            Dra. María Ejemplo
-
-                        </div>
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Fecha
-                            </strong>
-
-                            5 de octubre de 2026
-
-                        </div>
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Hora
-                            </strong>
-
-                            9:00 a.m. - 10:00 a.m.
-
-                        </div>
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Modalidad
-                            </strong>
-
-                            Presencial
-
-                        </div>
-
-
-                        <div class="detalle-item">
-
-                            <strong>
-                                Lugar
-                            </strong>
-
-                            Auditorio principal
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="descripcion">
-
-                        <strong>
-                            Descripción
-                        </strong>
-
-                        <p>
-
-                            Esta conferencia abordará la importancia
-                            de las interacciones biológicas dentro
-                            de los ecosistemas tropicales, así como
-                            su relación con la conservación de la
-                            biodiversidad.
-
-                        </p>
-
-
-                        <p>
-
-                            <em>
-
-                                Este contenido es únicamente un
-                                ejemplo para visualizar el diseño.
-                                Será reemplazado por la información
-                                real del cronograma.
-
-                            </em>
-
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-<!-- =====================================================
-     FUNCIONES DEL CRONOGRAMA
-     ===================================================== -->
-
-<script>
-
-/* ABRIR Y CERRAR ACTIVIDADES */
-
-document.querySelectorAll(".evento").forEach(function(evento) {
-
-    const tarjeta = evento.querySelector(".resumen-evento");
-
-    tarjeta.addEventListener("click", function(e) {
-
-        evento.classList.toggle("activo");
-
-    });
-
-});
-
-
-/* FILTROS */
-
-const filtroDia = document.getElementById("filtroDia");
-
-const filtroTipo = document.getElementById("filtroTipo");
-
-const busqueda = document.getElementById("busqueda");
-
-
-function filtrarEventos() {
-
-    const dia = filtroDia.value;
-
-    const tipo = filtroTipo.value;
-
-    const texto = busqueda.value.toLowerCase().trim();
-
-
-    document.querySelectorAll(".evento").forEach(function(evento) {
-
-        const coincideDia =
-            dia === "todos" ||
-            evento.dataset.dia === dia;
-
-        const coincideTipo =
-            tipo === "todos" ||
-            evento.dataset.tipo === tipo;
-
-        const coincideTexto =
-            evento.innerText.toLowerCase().includes(texto);
-
-
-        if (coincideDia && coincideTipo && coincideTexto) {
-
-            evento.style.display = "";
-
-        } else {
-
-            evento.style.display = "none";
-
+        margin-bottom: 10px;
+      }
+
+      .actividad .hora {
+        color: #087da0;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .actividad .tipo {
+        display: inline-block;
+        background: #dcefe7;
+        color: #17634f;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .detalle {
+        display: none;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #c9ded5;
+      }
+
+      .actividad.activo .detalle {
+        display: block;
+      }
+
+      .actividad[hidden] {
+        display: none !important;
+      }
+
+      .nota-cronograma {
+        background: #fff9e8;
+        border-left: 4px solid #d5a82e;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      @media (max-width: 600px) {
+        .filtros {
+          flex-direction: column;
         }
 
-    });
+        .filtros select,
+        .filtros input {
+          width: 100%;
+          min-width: 0;
+        }
 
-}
+        .actividad {
+          padding: 16px;
+        }
 
+        .actividad h3 {
+          font-size: 18px;
+        }
+      }
+    </style>
 
-filtroDia.addEventListener("change", filtrarEventos);
+    <!-- =========================
+         SECCIÓN CRONOGRAMA
+    ========================= -->
 
-filtroTipo.addEventListener("change", filtrarEventos);
+    <section id="cronograma">
 
-busqueda.addEventListener("input", filtrarEventos);
+      <h2>Cronograma</h2>
 
-</script>
+      <p style="text-align: center;">
+        Consulta las actividades del III Simposio de Interacciones
+        Biológicas y Diversidad.
+      </p>
 
+      <div class="nota-cronograma">
+        <strong>Nota:</strong>
+        El cronograma que aparece a continuación es un ejemplo
+        provisional. Sustituiremos las actividades y horarios por
+        el programa oficial del simposio.
+      </div>
 
-<!-- =====================================================
-     PLANTILLA DE PÓSTER
-     ===================================================== -->
+      <!-- FILTROS -->
 
-<section id="posters">
+      <div class="filtros">
 
-    <h2 class="titulo">
-        Plantilla de póster
-    </h2>
+        <select id="filtro-dia">
+          <option value="todos">Todos los días</option>
+          <option value="5">5 de octubre</option>
+          <option value="6">6 de octubre</option>
+        </select>
 
-    <div class="card">
+        <select id="filtro-tipo">
+          <option value="todos">Todas las actividades</option>
+          <option value="conferencia">Conferencias</option>
+          <option value="ponencia">Ponencias</option>
+          <option value="poster">Posters</option>
+          <option value="taller">Talleres</option>
+          <option value="otro">Otras actividades</option>
+        </select>
 
-        <p>
-            Consulta la plantilla oficial de Canva para preparar
-            tu póster científico para el simposio.
-        </p>
-
-        <a
-            class="boton"
-            href="https://canva.link/u1kqdcl0ja9gwek"
-            target="_blank"
-            rel="noopener noreferrer"
+        <input
+          type="text"
+          id="buscar-actividad"
+          placeholder="Buscar actividad..."
         >
-            Abrir plantilla en Canva
-        </a>
 
-    </div>
+      </div>
 
-</section>
+      <!-- ACTIVIDAD DE EJEMPLO -->
 
+      <div
+        class="actividad"
+        data-dia="5"
+        data-tipo="conferencia"
+        data-busqueda="conferencia inaugural biodiversidad"
+      >
 
-<!-- =====================================================
-     ASISTENCIA
-     ===================================================== -->
+        <span class="tipo">Conferencia</span>
 
-<section id="asistencia">
-
-    <h2 class="titulo">
-        Registro de asistencia
-    </h2>
-
-    <div class="card">
-
-        <p>
-            El día del evento encontrarás aquí el código QR
-            para registrar tu asistencia.
+        <p class="hora">
+          09:00 - 10:00 h | 5 de octubre
         </p>
 
-        <div style="text-align:center; padding:20px;">
+        <h3>Conferencia inaugural</h3>
 
-            <img
-                src="qr.png"
-                alt="Código QR de asistencia"
-                style="width:250px; max-width:90%; height:auto;"
-                onerror="this.style.display='none';"
-            >
+        <p>
+          Conferencia de apertura del simposio.
+        </p>
 
-            <p>
-                <em>
-                    El código QR estará disponible próximamente.
-                </em>
-            </p>
+        <div class="detalle">
+          <p>
+            <strong>Ponente:</strong>
+            Por confirmar.
+          </p>
 
+          <p>
+            <strong>Lugar:</strong>
+            Por confirmar.
+          </p>
+
+          <p>
+            <strong>Descripción:</strong>
+            Actividad de ejemplo. Se actualizará con la información
+            oficial del programa.
+          </p>
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACTO
-     ===================================================== -->
-
-<section id="contacto">
-
-    <h2 class="titulo">
-        Contacto
-    </h2>
-
-    <div class="card">
-
-        <p>
-            Para más información sobre el simposio,
-            comunícate con el equipo organizador.
+        <p style="color: #087da0; font-size: 14px;">
+          Pulsa para ver los detalles.
         </p>
 
-        <p>
-            <strong>Correo electrónico:</strong>
-            Agregar correo oficial del evento.
-        </p>
+      </div>
 
-        <p>
-            <strong>Institución:</strong>
-            Universidad Distrital Francisco José de Caldas.
-        </p>
+      <!-- AQUÍ AGREGAREMOS LAS DEMÁS ACTIVIDADES
+           DEL PROGRAMA OFICIAL -->
 
-    </div>
+      <p
+        id="sin-resultados"
+        style="display: none; text-align: center; padding: 20px;"
+      >
+        No se encontraron actividades con esos filtros.
+      </p>
 
-</section>
+    </section>
+
+       <!-- =========================
+         POSTERS
+    ========================= -->
+
+    <section id="posters">
+
+      <h2>Posters</h2>
+
+      <p style="text-align: center;">
+        Consulta la plantilla oficial para la elaboración de posters
+        del III Simposio.
+      </p>
+
+      <div style="text-align: center; margin: 30px 0;">
+
+        <a
+          class="boton"
+          href="https://canva.link/u1kqdcl0ja9gwek"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver plantilla de poster
+        </a>
+
+      </div>
+
+    </section>
 
 
-</div>
+    <!-- =========================
+         ASISTENCIA
+    ========================= -->
+
+    <section id="asistencia">
+
+      <h2>Asistencia</h2>
+
+      <p style="text-align: center;">
+        Escanea el código QR para consultar la información
+        de asistencia al simposio.
+      </p>
+
+      <div style="text-align: center; margin: 30px auto;">
+
+        <img
+          src="qr.png"
+          alt="Código QR de asistencia"
+          style="
+            display: block;
+            width: 250px;
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
+          "
+          onerror="this.style.display='none';"
+        >
+
+      </div>
+
+      <p style="text-align: center; font-size: 14px;">
+        El código QR estará disponible cuando se suba el archivo
+        qr.png al repositorio.
+      </p>
+
+    </section>
 
 
-<!-- =====================================================
-     PIE DE PÁGINA
-     ===================================================== -->
+    <!-- =========================
+         CONTACTO
+    ========================= -->
 
-<footer>
+    <section id="contacto">
+
+      <h2>Contacto</h2>
+
+      <p style="text-align: center;">
+        Para más información sobre el III Simposio de Interacciones
+        Biológicas y Diversidad, puedes escribirnos a:
+      </p>
+
+      <p style="text-align: center;">
+        <a
+          href="mailto:correo@ejemplo.com"
+          style="
+            color: #087da0;
+            font-weight: bold;
+            text-decoration: none;
+          "
+        >
+          correo@ejemplo.com
+        </a>
+      </p>
+
+      <p style="text-align: center; font-size: 14px;">
+        Correo provisional. Sustituir por el correo oficial
+        del simposio.
+      </p>
+
+    </section>
+
+  </div>
+
+
+  <!-- =========================
+       PIE DE PÁGINA
+  ========================= -->
+
+  <footer>
 
     <p>
-        III Simposio de Interacciones Biológicas y Diversidad
+      III Simposio de Interacciones Biológicas y Diversidad
     </p>
 
     <p>
-        Universidad Distrital Francisco José de Caldas
+      5 y 6 de octubre de 2026
     </p>
 
-</footer>
+  </footer>
 
+
+  <!-- =========================
+       FUNCIONALIDAD DEL CRONOGRAMA
+  ========================= -->
+
+  <script>
+
+    // Desplegar detalles de las actividades
+
+    document.querySelectorAll('.actividad').forEach(function(actividad) {
+
+      actividad.addEventListener('click', function() {
+        actividad.classList.toggle('activo');
+      });
+
+    });
+
+
+    // Filtros del cronograma
+
+    const filtroDia = document.getElementById('filtro-dia');
+    const filtroTipo = document.getElementById('filtro-tipo');
+    const buscarActividad = document.getElementById('buscar-actividad');
+
+    const actividades = document.querySelectorAll('.actividad');
+    const sinResultados = document.getElementById('sin-resultados');
+
+
+    function filtrarActividades() {
+
+      const diaSeleccionado = filtroDia.value;
+      const tipoSeleccionado = filtroTipo.value;
+
+      const textoBusqueda = buscarActividad.value
+        .toLowerCase()
+        .trim();
+
+      let visibles = 0;
+
+      actividades.forEach(function(actividad) {
+
+        const dia = actividad.dataset.dia;
+        const tipo = actividad.dataset.tipo;
+
+        const texto = (
+          actividad.innerText + ' ' +
+          actividad.dataset.busqueda
+        ).toLowerCase();
+
+        const coincideDia =
+          diaSeleccionado === 'todos' ||
+          dia === diaSeleccionado;
+
+        const coincideTipo =
+          tipoSeleccionado === 'todos' ||
+          tipo === tipoSeleccionado;
+
+        const coincideTexto =
+          texto.includes(textoBusqueda);
+
+        const mostrar =
+          coincideDia &&
+          coincideTipo &&
+          coincideTexto;
+
+        actividad.hidden = !mostrar;
+
+        if (mostrar) {
+          visibles++;
+        }
+
+      });
+
+      sinResultados.style.display =
+        visibles === 0 ? 'block' : 'none';
+
+    }
+
+
+    filtroDia.addEventListener('change', filtrarActividades);
+    filtroTipo.addEventListener('change', filtrarActividades);
+
+    buscarActividad.addEventListener('input', filtrarActividades);
+
+  </script>
 
 </body>
-
 </html>
