@@ -2467,57 +2467,40 @@ background:#5e548e;
 
 /* DETALLE DESPLEGABLE */
 
-
 .evento-detalle {
-
-
-max-height:0;
-
-
-overflow:hidden;
-
-
-padding:0 30px;
-
-
-background:var(--azul-claro);
-
-
-transition:
-
-max-height .4s ease,
-
-padding .4s ease;
-
-
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    background: var(--azul-claro);
+    transition: max-height .4s ease, padding .4s ease;
 }
-
-
 
 .evento.activo .evento-detalle {
-
-
-max-height:300px;
-
-
-padding:25px 30px;
-
-
+    max-height: 2000px;
+    padding: 25px 30px;
 }
-
-
 
 .evento-detalle p {
-
-
-margin-bottom:12px;
-
-
-line-height:1.6;
-
-
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
+
+/* AJUSTE PARA CELULARES */
+
+@media (max-width:700px) {
+
+    .evento.activo .evento-detalle {
+        max-height: 2000px;
+        padding: 20px;
+    }
+
+    .evento-detalle p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+}
 
 
 
@@ -2636,6 +2619,7 @@ width:100%;
 
 
 }
+   
 
 /* =====================================
    POSTERS Y LOGO PARA DIAPOSITIVAS
