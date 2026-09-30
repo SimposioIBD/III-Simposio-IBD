@@ -3479,34 +3479,21 @@ simposioibd@udistrital.edu.co
 
 
 
-<!-- =========================================
-     PIE DE PÁGINA DEL SIMPOSIO
-========================================= -->
-
 <footer class="footer-simposio">
 
-    <!-- Imagen de pie de página a todo el ancho -->
+  <div class="footer-texto">
+    <p class="footer-nombre">
+      III Simposio de Interacciones Biológicas y Diversidad
+    </p>
 
-    <div class="footer-imagen">
-        <img
-            src="piedepagina.png"
-            alt="Pie de página del Simposio"
-        >
-    </div>
+    <p class="footer-derechos">
+      © 2026 Todos los derechos reservados
+    </p>
+  </div>
 
-    <!-- Texto legal e institucional -->
-
-    <div class="footer-texto">
-
-        <p class="footer-nombre">
-            III Simposio de Interacciones Biológicas y Diversidad
-        </p>
-
-        <p class="footer-derechos">
-            © 2026 Todos los derechos reservados
-        </p>
-
-    </div>
+  <div class="footer-imagen">
+    <img src="piedepagina.png" alt="Ilustración del simposio">
+  </div>
 
 </footer>
 
@@ -3876,6 +3863,65 @@ height:220px;
 }
 
 
+   /* PIE DE PÁGINA: TEXTO ARRIBA E IMAGEN ABAJO */
+
+footer.footer-simposio {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* TEXTO */
+
+.footer-simposio .footer-texto {
+  order: 1;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent !important;
+  color: #084b69;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 0;
+}
+
+.footer-simposio .footer-nombre,
+.footer-simposio .footer-derechos {
+  color: #084b69 !important;
+  margin: 5px 0;
+}
+
+/* DIBUJO DEBAJO DEL TEXTO */
+
+.footer-simposio .footer-imagen {
+  order: 2;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  background: transparent !important;
+}
+
+.footer-simposio .footer-imagen img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  border: none;
+}
+   
 </style>
 
 
