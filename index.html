@@ -3479,24 +3479,34 @@ simposioibd@udistrital.edu.co
 
 
 
-<!-- =====================================
-     FOOTER
-===================================== -->
+<!-- =========================================
+     PIE DE PÁGINA DEL SIMPOSIO
+========================================= -->
 
+<footer class="footer-simposio">
 
-<footer>
+    <!-- Imagen de pie de página a todo el ancho -->
 
+    <div class="footer-imagen">
+        <img
+            src="piedepagina.png"
+            alt="Pie de página del Simposio"
+        >
+    </div>
 
-<h3>
-III Simposio de Interacciones Biológicas y Diversidad
-</h3>
+    <!-- Texto legal e institucional -->
 
+    <div class="footer-texto">
 
-<p>
-© 2026 Todos los derechos reservados
-</p>
+        <p class="footer-nombre">
+            III Simposio de Interacciones Biológicas y Diversidad
+        </p>
 
+        <p class="footer-derechos">
+            © 2026 Todos los derechos reservados
+        </p>
 
+    </div>
 
 </footer>
 
@@ -3758,6 +3768,111 @@ height:220px;
 
 
 
+}
+
+/* =========================================
+   NUEVA PALETA VIVA PARA EL CRONOGRAMA
+========================================= */
+
+/* Tarjetas */
+.evento {
+    border-left: 9px solid #0d6992 !important;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(13, 105, 146, 0.13);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.evento:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(13, 105, 146, 0.22);
+}
+
+/* Etiquetas de tipo de actividad */
+
+.tipo-evento.magistral {
+    background: #155eef !important;
+    color: #ffffff !important;
+}
+
+.tipo-evento.ponencia {
+    background: #d946ef !important;
+    color: #ffffff !important;
+}
+
+.tipo-evento.charla {
+    background: #0891b2 !important;
+    color: #ffffff !important;
+}
+
+.tipo-evento.poster {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+.tipo-evento.descanso {
+    background: #ea580c !important;
+    color: #ffffff !important;
+}
+
+.tipo-evento.inicio-cierre {
+    background: #0d6992 !important;
+    color: #ffffff !important;
+}
+
+.tipo-evento.remota {
+    background: #7c3aed !important;
+    color: #ffffff !important;
+}
+
+/* Bordes laterales según el tipo */
+
+.evento:has(.magistral) {
+    border-left-color: #155eef !important;
+}
+
+.evento:has(.ponencia) {
+    border-left-color: #d946ef !important;
+}
+
+.evento:has(.charla) {
+    border-left-color: #0891b2 !important;
+}
+
+.evento:has(.poster) {
+    border-left-color: #15803d !important;
+}
+
+.evento:has(.descanso) {
+    border-left-color: #ea580c !important;
+}
+
+.evento:has(.inicio-cierre) {
+    border-left-color: #0d6992 !important;
+}
+
+.evento:has(.remota) {
+    border-left-color: #7c3aed !important;
+}
+
+/* Fondo de la información desplegada */
+
+.evento-detalle {
+    background: #eef8fc !important;
+    border-top: 1px solid #d4eaf3;
+}
+
+/* Título de las actividades */
+
+.evento-visible h3 {
+    color: #123b50;
+}
+
+/* Día del cronograma */
+
+.dia-titulo {
+    color: #0d6992;
+    border-left: 6px solid #0d6992;
 }
 
 
