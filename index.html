@@ -3950,7 +3950,7 @@ el código QR para realizar el registro de asistencia.
 </p>
 
 
-<div class="qr-container" style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
+<div class="qr-container" style="display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; width:100%;">
 
     <div class="qr-placeholder">
         <img
@@ -4113,8 +4113,6 @@ text-align:center;
     margin-top:35px;
 }
 
-
-}
 
 
 
@@ -4315,20 +4313,39 @@ margin:8px;
 
 @media(max-width:700px){
 
+.qr-container {
 
+display:flex !important;
 
-.qr-placeholder {
+flex-direction:column !important;
 
+justify-content:center !important;
 
-width:220px;
+align-items:center !important;
 
+gap:40px !important;
 
-height:220px;
-
+width:100% !important;
 
 }
 
+.qr-placeholder {
 
+width:220px;
+
+height:220px;
+
+margin:0 auto !important;
+
+}
+
+.qr-placeholder img {
+
+width:220px !important;
+
+height:220px !important;
+
+}
 
 }
 
